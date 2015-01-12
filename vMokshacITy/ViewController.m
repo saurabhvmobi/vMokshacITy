@@ -17,6 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+
+
+    self.loginButton.layer.cornerRadius=3;
+    self.userName.layer.cornerRadius=3;
+    self.passWord.layer.cornerRadius=3;
+    
+    [self.loginButton setTitle:@"Sign In" forState:normal];
+    self.userName.text=@"  User name";
+self.passWord.text=@"  Password";
+
+    self.navigationController.navigationBarHidden=YES;
+    
+
+
 }
 
 - (void)didReceiveMemoryWarning {

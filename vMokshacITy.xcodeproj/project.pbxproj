@@ -14,6 +14,16 @@
 		9932C3EE1A5E6277006C90A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9932C3ED1A5E6277006C90A4 /* Images.xcassets */; };
 		9932C3F11A5E6277006C90A4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9932C3EF1A5E6277006C90A4 /* LaunchScreen.xib */; };
 		9932C3FD1A5E6277006C90A4 /* vMokshacITyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C3FC1A5E6277006C90A4 /* vMokshacITyTests.m */; };
+		9932C40B1A5EA651006C90A4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C40A1A5EA651006C90A4 /* HomeViewController.m */; };
+		9932C40E1A5EAEDA006C90A4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C40D1A5EAEDA006C90A4 /* MessageViewController.m */; };
+		9932C4111A5EAEF5006C90A4 /* DetailMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C4101A5EAEF5006C90A4 /* DetailMessageViewController.m */; };
+		9932C4141A5EAF30006C90A4 /* MessageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C4131A5EAF30006C90A4 /* MessageDataModel.m */; };
+		9932C4171A5EBE3B006C90A4 /* MessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C4161A5EBE3B006C90A4 /* MessageViewCell.m */; };
+		9942E7251A5F92300090513C /* ToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E7241A5F92300090513C /* ToolsViewController.m */; };
+		9942E7281A5FB4E40090513C /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E7271A5FB4E40090513C /* SettingViewController.m */; };
+		9942E72B1A5FB9090090513C /* LanLocTheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E72A1A5FB9090090513C /* LanLocTheViewController.m */; };
+		9942E72E1A5FC7010090513C /* RaiseTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */; };
+		995408D31A63812F009BDAB7 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995408D21A63812F009BDAB7 /* TipsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,26 @@
 		9932C3F61A5E6277006C90A4 /* vMokshacITyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vMokshacITyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9932C3FB1A5E6277006C90A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9932C3FC1A5E6277006C90A4 /* vMokshacITyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vMokshacITyTests.m; sourceTree = "<group>"; };
+		9932C4091A5EA651006C90A4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		9932C40A1A5EA651006C90A4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		9932C40C1A5EAEDA006C90A4 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		9932C40D1A5EAEDA006C90A4 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		9932C40F1A5EAEF5006C90A4 /* DetailMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailMessageViewController.h; sourceTree = "<group>"; };
+		9932C4101A5EAEF5006C90A4 /* DetailMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailMessageViewController.m; sourceTree = "<group>"; };
+		9932C4121A5EAF2F006C90A4 /* MessageDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDataModel.h; sourceTree = "<group>"; };
+		9932C4131A5EAF30006C90A4 /* MessageDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDataModel.m; sourceTree = "<group>"; };
+		9932C4151A5EBE3B006C90A4 /* MessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewCell.h; sourceTree = "<group>"; };
+		9932C4161A5EBE3B006C90A4 /* MessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewCell.m; sourceTree = "<group>"; };
+		9942E7231A5F92300090513C /* ToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolsViewController.h; sourceTree = "<group>"; };
+		9942E7241A5F92300090513C /* ToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolsViewController.m; sourceTree = "<group>"; };
+		9942E7261A5FB4E40090513C /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		9942E7271A5FB4E40090513C /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		9942E7291A5FB9090090513C /* LanLocTheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanLocTheViewController.h; sourceTree = "<group>"; };
+		9942E72A1A5FB9090090513C /* LanLocTheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanLocTheViewController.m; sourceTree = "<group>"; };
+		9942E72C1A5FC7010090513C /* RaiseTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaiseTicketViewController.h; sourceTree = "<group>"; };
+		9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaiseTicketViewController.m; sourceTree = "<group>"; };
+		995408D11A63812F009BDAB7 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
+		995408D21A63812F009BDAB7 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +113,29 @@
 			children = (
 				9932C3E41A5E6277006C90A4 /* AppDelegate.h */,
 				9932C3E51A5E6277006C90A4 /* AppDelegate.m */,
+				9932C3EA1A5E6277006C90A4 /* Main.storyboard */,
 				9932C3E71A5E6277006C90A4 /* ViewController.h */,
 				9932C3E81A5E6277006C90A4 /* ViewController.m */,
-				9932C3EA1A5E6277006C90A4 /* Main.storyboard */,
+				9932C4091A5EA651006C90A4 /* HomeViewController.h */,
+				9932C40A1A5EA651006C90A4 /* HomeViewController.m */,
+				9932C40C1A5EAEDA006C90A4 /* MessageViewController.h */,
+				9932C40D1A5EAEDA006C90A4 /* MessageViewController.m */,
+				9932C4151A5EBE3B006C90A4 /* MessageViewCell.h */,
+				9932C4161A5EBE3B006C90A4 /* MessageViewCell.m */,
+				9932C40F1A5EAEF5006C90A4 /* DetailMessageViewController.h */,
+				9932C4101A5EAEF5006C90A4 /* DetailMessageViewController.m */,
+				9932C4121A5EAF2F006C90A4 /* MessageDataModel.h */,
+				9932C4131A5EAF30006C90A4 /* MessageDataModel.m */,
+				9942E72C1A5FC7010090513C /* RaiseTicketViewController.h */,
+				9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */,
+				9942E7231A5F92300090513C /* ToolsViewController.h */,
+				9942E7241A5F92300090513C /* ToolsViewController.m */,
+				995408D11A63812F009BDAB7 /* TipsViewController.h */,
+				995408D21A63812F009BDAB7 /* TipsViewController.m */,
+				9942E7261A5FB4E40090513C /* SettingViewController.h */,
+				9942E7271A5FB4E40090513C /* SettingViewController.m */,
+				9942E7291A5FB9090090513C /* LanLocTheViewController.h */,
+				9942E72A1A5FB9090090513C /* LanLocTheViewController.m */,
 				9932C3ED1A5E6277006C90A4 /* Images.xcassets */,
 				9932C3EF1A5E6277006C90A4 /* LaunchScreen.xib */,
 				9932C3E01A5E6277006C90A4 /* Supporting Files */,
@@ -220,8 +270,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9932C3E91A5E6277006C90A4 /* ViewController.m in Sources */,
+				9942E72E1A5FC7010090513C /* RaiseTicketViewController.m in Sources */,
+				9932C4141A5EAF30006C90A4 /* MessageDataModel.m in Sources */,
+				9942E72B1A5FB9090090513C /* LanLocTheViewController.m in Sources */,
+				9932C40E1A5EAEDA006C90A4 /* MessageViewController.m in Sources */,
 				9932C3E61A5E6277006C90A4 /* AppDelegate.m in Sources */,
+				995408D31A63812F009BDAB7 /* TipsViewController.m in Sources */,
+				9932C4171A5EBE3B006C90A4 /* MessageViewCell.m in Sources */,
+				9932C4111A5EAEF5006C90A4 /* DetailMessageViewController.m in Sources */,
+				9942E7251A5F92300090513C /* ToolsViewController.m in Sources */,
 				9932C3E31A5E6277006C90A4 /* main.m in Sources */,
+				9932C40B1A5EA651006C90A4 /* HomeViewController.m in Sources */,
+				9942E7281A5FB4E40090513C /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +472,7 @@
 				9932C4021A5E6277006C90A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9932C4031A5E6277006C90A4 /* Build configuration list for PBXNativeTarget "vMokshacITyTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +481,7 @@
 				9932C4051A5E6277006C90A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
