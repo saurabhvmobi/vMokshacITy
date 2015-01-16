@@ -1,30 +1,31 @@
 //
-//  SettingViewController.m
+//  ServiceOrdViewController.m
 //  vMokshacITy
 //
-//  Created by Saurabh Suman on 09/01/15.
+//  Created by Saurabh Suman on 16/01/15.
 //  Copyright (c) 2015 Vmoksha Technologies Pvt Ltd. All rights reserved.
 //
 
-#import "SettingViewController.h"
-#import "LanLocTheViewController.h"
+#import "ServiceOrdViewController.h"
 
+@interface ServiceOrdViewController ()
 
-@interface SettingViewController ()
 {
 
     NSArray *tableData;
+ 
+
 }
+
 @end
 
-@implementation SettingViewController
+@implementation ServiceOrdViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-
-    tableData=@[@"Language",@"Location",@"Theme"];
+    tableData=@[@"efsdds",@"dmakmfkf",@"awdadfasf"];
 
 }
 
@@ -55,7 +56,17 @@
 {
     
     return [tableData count];
+    
+    
 }
+
+
+
+
+
+
+
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -66,46 +77,33 @@
     
     
     UILabel *lab=(UILabel *)[cell viewWithTag:101];
+    
     lab.text=tableData[indexPath.row];
-    
-    
-    
-    
     
     return cell;
 }
 
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 
-
-
-
-
-
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"settingtosettingList"]) {
-        
-        
-        UINavigationController *nav = [segue destinationViewController];
-        LanLocTheViewController *LLT=(LanLocTheViewController *)nav.topViewController;
-        NSIndexPath *index = [self.tableView indexPathForSelectedRow];
-        _selectingsetting =  tableData[index.row];
-        LLT.selectedSetting=_selectingsetting;
-    
-    
-    
-    }
-
-    
-    
-    
-    
 }
+
+
+
+
+- (IBAction)cancelButtonAction:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+
+
+
+
+
+}
+
 
 
 

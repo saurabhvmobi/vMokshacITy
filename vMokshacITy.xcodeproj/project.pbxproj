@@ -24,6 +24,11 @@
 		9942E72B1A5FB9090090513C /* LanLocTheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E72A1A5FB9090090513C /* LanLocTheViewController.m */; };
 		9942E72E1A5FC7010090513C /* RaiseTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */; };
 		995408D31A63812F009BDAB7 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995408D21A63812F009BDAB7 /* TipsViewController.m */; };
+		99B208911A66712700C78871 /* NewMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B208901A66712700C78871 /* NewMessageViewController.m */; };
+		99B208941A6677B000C78871 /* NewMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B208931A6677B000C78871 /* NewMessageCell.m */; };
+		99E622081A68DB1B007F5581 /* ServiceOrdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E622071A68DB1B007F5581 /* ServiceOrdViewController.m */; };
+		99E6220B1A68EFB5007F5581 /* myTicOrdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E6220A1A68EFB5007F5581 /* myTicOrdViewController.m */; };
+		99E6220F1A68FF39007F5581 /* MyTicketDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E6220E1A68FF39007F5581 /* MyTicketDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,16 @@
 		9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaiseTicketViewController.m; sourceTree = "<group>"; };
 		995408D11A63812F009BDAB7 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		995408D21A63812F009BDAB7 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
+		99B2088F1A66712700C78871 /* NewMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMessageViewController.h; sourceTree = "<group>"; };
+		99B208901A66712700C78871 /* NewMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMessageViewController.m; sourceTree = "<group>"; };
+		99B208921A6677B000C78871 /* NewMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMessageCell.h; sourceTree = "<group>"; };
+		99B208931A6677B000C78871 /* NewMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMessageCell.m; sourceTree = "<group>"; };
+		99E622061A68DB1B007F5581 /* ServiceOrdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceOrdViewController.h; sourceTree = "<group>"; };
+		99E622071A68DB1B007F5581 /* ServiceOrdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceOrdViewController.m; sourceTree = "<group>"; };
+		99E622091A68EFB5007F5581 /* myTicOrdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myTicOrdViewController.h; sourceTree = "<group>"; };
+		99E6220A1A68EFB5007F5581 /* myTicOrdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myTicOrdViewController.m; sourceTree = "<group>"; };
+		99E6220D1A68FF39007F5581 /* MyTicketDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTicketDataModel.h; sourceTree = "<group>"; };
+		99E6220E1A68FF39007F5581 /* MyTicketDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTicketDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +133,10 @@
 				9932C3E81A5E6277006C90A4 /* ViewController.m */,
 				9932C4091A5EA651006C90A4 /* HomeViewController.h */,
 				9932C40A1A5EA651006C90A4 /* HomeViewController.m */,
+				99B2088F1A66712700C78871 /* NewMessageViewController.h */,
+				99B208901A66712700C78871 /* NewMessageViewController.m */,
+				99B208921A6677B000C78871 /* NewMessageCell.h */,
+				99B208931A6677B000C78871 /* NewMessageCell.m */,
 				9932C40C1A5EAEDA006C90A4 /* MessageViewController.h */,
 				9932C40D1A5EAEDA006C90A4 /* MessageViewController.m */,
 				9932C4151A5EBE3B006C90A4 /* MessageViewCell.h */,
@@ -126,8 +145,7 @@
 				9932C4101A5EAEF5006C90A4 /* DetailMessageViewController.m */,
 				9932C4121A5EAF2F006C90A4 /* MessageDataModel.h */,
 				9932C4131A5EAF30006C90A4 /* MessageDataModel.m */,
-				9942E72C1A5FC7010090513C /* RaiseTicketViewController.h */,
-				9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */,
+				99E6220C1A68FE60007F5581 /* Ticket */,
 				9942E7231A5F92300090513C /* ToolsViewController.h */,
 				9942E7241A5F92300090513C /* ToolsViewController.m */,
 				995408D11A63812F009BDAB7 /* TipsViewController.h */,
@@ -167,6 +185,21 @@
 				9932C3FB1A5E6277006C90A4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99E6220C1A68FE60007F5581 /* Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				9942E72C1A5FC7010090513C /* RaiseTicketViewController.h */,
+				9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */,
+				99E622091A68EFB5007F5581 /* myTicOrdViewController.h */,
+				99E6220A1A68EFB5007F5581 /* myTicOrdViewController.m */,
+				99E6220D1A68FF39007F5581 /* MyTicketDataModel.h */,
+				99E6220E1A68FF39007F5581 /* MyTicketDataModel.m */,
+				99E622061A68DB1B007F5581 /* ServiceOrdViewController.h */,
+				99E622071A68DB1B007F5581 /* ServiceOrdViewController.m */,
+			);
+			name = Ticket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9932C3E91A5E6277006C90A4 /* ViewController.m in Sources */,
+				99B208911A66712700C78871 /* NewMessageViewController.m in Sources */,
 				9942E72E1A5FC7010090513C /* RaiseTicketViewController.m in Sources */,
+				99E6220B1A68EFB5007F5581 /* myTicOrdViewController.m in Sources */,
 				9932C4141A5EAF30006C90A4 /* MessageDataModel.m in Sources */,
 				9942E72B1A5FB9090090513C /* LanLocTheViewController.m in Sources */,
 				9932C40E1A5EAEDA006C90A4 /* MessageViewController.m in Sources */,
@@ -278,10 +313,13 @@
 				995408D31A63812F009BDAB7 /* TipsViewController.m in Sources */,
 				9932C4171A5EBE3B006C90A4 /* MessageViewCell.m in Sources */,
 				9932C4111A5EAEF5006C90A4 /* DetailMessageViewController.m in Sources */,
+				99E622081A68DB1B007F5581 /* ServiceOrdViewController.m in Sources */,
 				9942E7251A5F92300090513C /* ToolsViewController.m in Sources */,
 				9932C3E31A5E6277006C90A4 /* main.m in Sources */,
 				9932C40B1A5EA651006C90A4 /* HomeViewController.m in Sources */,
 				9942E7281A5FB4E40090513C /* SettingViewController.m in Sources */,
+				99B208941A6677B000C78871 /* NewMessageCell.m in Sources */,
+				99E6220F1A68FF39007F5581 /* MyTicketDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = vMokshacITy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -414,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = vMokshacITy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -7,12 +7,18 @@
 //
 
 #import "RaiseTicketViewController.h"
+#import "ServiceOrdViewController.h"
+
 
 @interface RaiseTicketViewController ()
 {
  
 
     NSArray *dataTable;
+
+    UISlider *sliderOutlet;
+
+
 }
 @end
 
@@ -31,7 +37,22 @@
 }
 
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+   
+    if ([_strDFF isEqualToString:@"placeOrder"]) {
+        self.navigationItem.title = @"Place Order";
 
+    }
+    else
+    {
+    self.navigationItem.title = @"Raise Ticket";
+    }
+   
+
+}
 
 
 /*
@@ -53,19 +74,7 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    if (section==0) {
-        return 1;
-    }
-
-    else if (section==1) {
-        return 1;
-    }
-    else if (section==2) {
-        return 1;
-    }
-
-    else
-        return 1;
+           return 1;
     
 
    
@@ -80,59 +89,77 @@
     
     if (indexPath.section==0) {
         cell=[tableView dequeueReusableCellWithIdentifier:@"firstcell" forIndexPath:indexPath];
+    
+    
+   
+        UILabel *lableft=(UILabel *)[cell viewWithTag:100];
+                lableft.text=@"Requester";
+        
+                UILabel *labright=(UILabel *)[cell viewWithTag:101];
+               labright.text=@"Jim Kolhar";
+    
     }
     
     else if(indexPath.section==1)
     {
         cell =[tableView dequeueReusableCellWithIdentifier:@"secondcell" forIndexPath:indexPath];
-    }
-    else if(indexPath.section==2)
-    {
-     cell =[tableView dequeueReusableCellWithIdentifier:@"thirdcell" forIndexPath:indexPath];
     
-    }
-    else
-    {
-    cell =[tableView dequeueReusableCellWithIdentifier:@"fourth" forIndexPath:indexPath];
-    }
-   
-    
-    
-    
-    
-    
-    if (indexPath.section==0) {
-        UILabel *lableft=(UILabel *)[cell viewWithTag:100];
-        lableft.text=@"Requester";
-    
-        UILabel *labright=(UILabel *)[cell viewWithTag:101];
-        labright.text=@"Jim Kolhar";
-
-    
-    }
-    
-    if (indexPath.section==1) {
         UILabel *impact=(UILabel *)[cell viewWithTag:200];
         impact.text=@"Impact";
         
         UILabel *low=(UILabel *)[cell viewWithTag:201];
         low.text=@"Low";
-
+        
         UILabel *medium=(UILabel *)[cell viewWithTag:202];
         medium.text=@"Medium";
         
         UILabel *high=(UILabel *)[cell viewWithTag:203];
         high.text=@"High";
         
-
+        
         
         UILabel *critical=(UILabel *)[cell viewWithTag:204];
         critical.text=@"Critical";
-        
 
-    
+        
+        
+        
     
     }
+    else if(indexPath.section==2)
+    {
+     cell =[tableView dequeueReusableCellWithIdentifier:@"thirdcell" forIndexPath:indexPath];
+    
+        
+        UILabel *lab=(UILabel *)[cell viewWithTag:333];
+        
+        if ([_strDFF isEqualToString:@"placeOrder"]) {
+            lab.text=@"Select items";
+            
+        }
+        else
+        {
+            lab.text=@"Select a service";
+
+        }
+        
+
+        
+        
+        
+        
+    }
+    else
+    {
+    cell =[tableView dequeueReusableCellWithIdentifier:@"fourth" forIndexPath:indexPath];
+    
+        
+    
+    }
+   
+    
+    
+    
     
     
     
@@ -157,10 +184,23 @@
     if (section == 0||section==1)
     {
         
-    }else if (section == 2)
-    {
-     labelHeader.text=@"Select Services";
     }
+    
+    else if (section == 2)
+    {
+        
+        if ([_strDFF isEqualToString:@"placeOrder"]) {
+            labelHeader.text = @"Items";
+            
+        }
+        else
+        {
+           labelHeader.text = @"Service";
+        }
+        
+
+    }
+    
     else
     {
         labelHeader.text = @"Details";
@@ -179,6 +219,76 @@
     
     
     return 44.00;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section==1) {
+        return 70;
+    }
+
+   else if (indexPath.section==3)
+   {
+   
+       return 80;
+   }
+    
+    
+    
+    return 44;
+}
+- (IBAction)sliderAction:(id)sender {
+}
+- (IBAction)DoneButtonAction:(id)sender {
+
+    if ([_strDFF isEqualToString:@"placeOrder"]) {
+        UIAlertView *alt=[[UIAlertView alloc]initWithTitle:@"Congralutation!!!" message:@"your Order has been Saved" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alt show];
+    }
+else
+{
+    UIAlertView *alt=[[UIAlertView alloc]initWithTitle:@"Congralutation!!!" message:@"your Ticket has been Saved" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+    [alt show];
+
+}
+
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+
+  [self performSegueWithIdentifier:@"myTicketList_segue" sender:nil];  
+    
+}
+
+- (IBAction)imapctValueChanged:(UISlider *)sender
+{
+    sender.value = roundf(sender.value);
+}
+
+- (UIImage *)thumbImageForState:(UIControlState)state
+{
+    NSInteger  ii =sliderOutlet.value;
+    UIImage *imk;
+    
+    switch (ii) {
+        case 0:
+            imk=[UIImage imageNamed:@"RedCircle"];
+            break;
+        case 1:
+            return[UIImage imageNamed:@"OrangeCircle"];
+            break;
+        case 2:
+            return[UIImage imageNamed:@"greenCirlce"];
+            break;
+        case 3:
+            return[UIImage imageNamed:@"grayCircle"];
+            break;
+        default:
+            break;
+    }
+    return imk;
+    
 }
 
 

@@ -10,6 +10,7 @@
 
 @interface SettingViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property(nonatomic,strong)NSString *selectingsetting;
 

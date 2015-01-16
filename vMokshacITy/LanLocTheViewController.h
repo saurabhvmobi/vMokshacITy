@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LanLocTheViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property(nonatomic,strong)NSString *selectedSetting;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *DoneButtonAction;

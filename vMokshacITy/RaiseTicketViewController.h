@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RaiseTicketViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface RaiseTicketViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>
 
+- (IBAction)DoneButtonAction:(id)sender;
+
+
+@property(nonatomic,strong)NSString *strDFF;
 @end

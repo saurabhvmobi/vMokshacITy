@@ -10,4 +10,18 @@
 
 @interface HomeViewController : UIViewController
 
+
+- (IBAction)raiseTicketAction:(id)sender;
+- (IBAction)messageAction:(id)sender;
+
+- (IBAction)myTicketAction:(id)sender;
+
+- (IBAction)tipsAction:(id)sender;
+- (IBAction)PlacrOrderAction:(id)sender;
+- (IBAction)myOrderAction:(id)sender;
+- (IBAction)settingAction:(id)sender;
+
+- (IBAction)callHelpDeskAction:(id)sender;
+- (IBAction)webClipAction:(id)sender;
+
 @end

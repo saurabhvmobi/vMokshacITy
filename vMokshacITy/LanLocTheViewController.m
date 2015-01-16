@@ -14,7 +14,7 @@
      NSArray *Location;
      NSArray *Theame;
     
-
+    NSArray *tableData;
 }
 @end
 
@@ -29,7 +29,7 @@
    Location= @[@"Belgium",@"India",@"US",@"Japan",@"Bulgaria",@"France",@"Germany"];
    Theame=@[@"Blue Ocean",@"Orange Hue",@"Pink Rose",@"Green Glow"];
 
-
+    [_tableView reloadData];
 
 }
 
