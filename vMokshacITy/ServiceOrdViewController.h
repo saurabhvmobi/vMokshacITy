@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ServiceOrdViewController.h"
+
+#import "MyTicketDataModel.h"
+
+
+
 @interface ServiceOrdViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property(nonatomic,strong)MyTicketDataModel *Ticket;
+
+
+@property(nonatomic,strong)NSString *strDIFF;
 
 @end

@@ -67,12 +67,47 @@
     UILabel *lab=(UILabel *)[cell viewWithTag:101];
     lab.text=tableData[indexPath.row];
     
-    
-    
-    
-    
     return cell;
 }
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    if (indexPath.row==0) {
+        [self performSegueWithIdentifier:@"LyncCheckersegue" sender:self];
+    }
+
+
+    if (indexPath.row==1) {
+        [self performSegueWithIdentifier:@"PasswordExp" sender:self];
+    }
+    
+    if (indexPath.row==2) {
+        [self performSegueWithIdentifier:@"surveySegu" sender:self];
+    }
+    
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

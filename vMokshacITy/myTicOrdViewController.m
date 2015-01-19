@@ -8,9 +8,11 @@
 
 #import "myTicOrdViewController.h"
 
+
+
 @interface myTicOrdViewController ()
 {
-    NSArray *tableData;
+    NSMutableArray *tableData;
 }
 @end
 
@@ -19,10 +21,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  
+    tableData=[[NSMutableArray alloc]init];
 
-    tableData=@[@"sfnsj"];
-
-}
+    
+    if ([_strDFF isEqualToString:@"placeOrder"]) {
+        [self myOrder];
+    }
+    else
+    {
+    [self myTicketData];
+    
+    }
+    
+    
+    
+    
+    [_tableView reloadData];
+  }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -38,6 +54,28 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    
+    if ([_strDFF isEqualToString:@"placeOrder"]) {
+        self.navigationItem.title = @"Place Order";
+        
+    }
+    else
+    {
+        self.navigationItem.title = @"Raise Ticket";
+    }
+    
+    
+}
+
+
+
+
+
 
 
 
@@ -56,7 +94,10 @@
     
 }
 
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 63;
+}
 
 
 
@@ -67,13 +108,116 @@
     
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellidentifier];
     
+    MyTicketDataModel *ticket = tableData[indexPath.row];
     
-    UILabel *lab=(UILabel *)[cell viewWithTag:101];
     
-    //lab.text=tableData[indexPath.row];
+    UILabel *labservice=(UILabel *)[cell viewWithTag:101];
+    labservice.text =ticket.serviceType;
+    
+    
+    
+    UILabel *labagent=(UILabel *)[cell viewWithTag:102];
+    labagent.text= ticket.agent;
+    
+    
+    UILabel *labnum=(UILabel *)[cell viewWithTag:103];
+    labnum.text= ticket.ticNum;
+    
+    
+    UILabel *labstatus=(UILabel *)[cell viewWithTag:104];
+    labstatus.text= ticket.status;
+    
+    UILabel *labtimest=(UILabel *)[cell viewWithTag:105];
+    labtimest.text= ticket.timestamp;
+    
+    
     
     return cell;
 }
+
+-(void)myTicketData
+{
+
+    MyTicketDataModel *ticket = [[MyTicketDataModel alloc] init];
+    ticket.serviceType = @"Identity Service";
+    ticket.agent = @"Jonathan";
+    ticket.ticNum=@"#12345";
+    ticket.status = @"New";
+    ticket.date =@"25/12/1820";
+    ticket.timestamp=@"4 h";
+    ticket.serviceDetail=@"Please install the VPN software on my laptop. Please enable it ASAP.";
+    [tableData addObject:ticket];
+    
+    
+    ticket = [[MyTicketDataModel alloc] init];
+    ticket.serviceType = @"Identity Service";
+    ticket.agent = @"Jonathan";
+      ticket.timestamp=@"4 h";
+    ticket.status = @"New";
+    ticket.date =@"25/12/1820";
+     ticket.ticNum=@"#12345";
+    
+    ticket.serviceDetail=@"Please install the VPN software on my laptop. Please enable it ASAP.";
+    [tableData addObject:ticket];
+    
+    ticket = [[MyTicketDataModel alloc] init];
+    ticket.serviceType = @"Identity Service";
+    ticket.agent = @"Jonathan";
+     ticket.ticNum=@"#12345";
+    ticket.status = @"New";
+    ticket.date =@"25/12/1820";
+     ticket.timestamp=@"4 h";
+    ticket.serviceDetail=@"Please install the VPN software on my laptop. Please enable it ASAP.";
+    [tableData addObject:ticket];
+    
+
+}
+
+
+-(void)myOrder
+{
+    MyTicketDataModel *ticket = [[MyTicketDataModel alloc] init];
+    ticket.serviceType = @"i Phone";
+    ticket.agent = @"Jonathan";
+      ticket.timestamp=@"4 h";
+    ticket.status = @"New";
+    ticket.date =@"25/12/1820";
+     ticket.ticNum=@"#12345";
+    
+    ticket.serviceDetail=@"Please install the VPN software on my laptop. Please enable it ASAP.";
+    [tableData addObject:ticket];
+    
+    ticket = [[MyTicketDataModel alloc] init];
+    ticket.serviceType = @"Ipad";
+    ticket.agent = @"Jonathan";
+      ticket.timestamp=@"4 h";
+    ticket.status = @"New";
+    ticket.date =@"25/12/1820";
+     ticket.ticNum=@"#12345";
+    
+    ticket.serviceDetail=@"Please install the VPN software on my laptop. Please enable it ASAP.";
+    [tableData addObject:ticket];
+    
+    ticket = [[MyTicketDataModel alloc] init];
+    ticket.serviceType = @"Lan Cable";
+    ticket.agent = @"Jonathan";
+    ticket.timestamp=@"2 d";
+    ticket.status = @"New";
+    ticket.date =@"25/12/1820";
+    ticket.serviceDetail=@"Please install the VPN software on my laptop. Please enable it ASAP.";
+    ticket.ticNum=@"#12345";
+    [tableData addObject:ticket];
+    
+
+
+}
+
+
+
+
+
+
+
 
 
 

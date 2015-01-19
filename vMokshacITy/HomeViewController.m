@@ -10,6 +10,8 @@
 
 #import "RaiseTicketViewController.h"
 
+#import "myTicOrdViewController.h"
+
 @interface HomeViewController ()
 
 @end
@@ -109,8 +111,16 @@
         RaiseTicketViewController *RAIS=segue.destinationViewController;
         RAIS.strDFF=@"placeOrder";
         
-   
-}
+   }
+
+
+    if ([segue.identifier isEqualToString:@"hometomyorder"]) {
+        
+        myTicOrdViewController *mytic=segue.destinationViewController;
+        mytic.strDFF=@"placeOrder";
+    
+    
+    }
 
 }
 

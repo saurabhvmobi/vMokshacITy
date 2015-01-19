@@ -295,5 +295,16 @@ else
 
 
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([_strDFF isEqualToString:@"placeOrder"]){
+        
+              UINavigationController *nav = [segue destinationViewController];
+               ServiceOrdViewController *SO=(ServiceOrdViewController *)nav.topViewController;
+        
+        SO.strDIFF=@"placeorder";
+        
+    }
+
+}
 
 @end

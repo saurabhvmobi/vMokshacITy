@@ -8,12 +8,22 @@
 
 #import "ServiceOrdViewController.h"
 
+#import "MBProgressHUD.h"
+
+
+#define ORDER_PARAMETER  @"{\"request\":{\"CategoryTypeCode\":\"ORDER\"}}"
+#define TICKETLIST_PARAMETER @"{\"request\":{\"CategoryTypeCode\":\"TICKET\"}}"
+
+
+
 @interface ServiceOrdViewController ()
 
 {
 
-    NSArray *tableData;
- 
+    NSMutableArray *tableData;
+
+    AFHTTPRequestOperationManager *manage;
+
 
 }
 
@@ -22,10 +32,37 @@
 @implementation ServiceOrdViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    tableData=@[@"efsdds",@"dmakmfkf",@"awdadfasf"];
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+      [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    
+    if ([_strDIFF isEqualToString:@"placeorder"]) {
+        [self getdataFromweb]; 
+    }
+    
+    else
+    {
+        [self getservice];
+    
+    }
+    
+    
+        
+    
+    
+    
+   tableData=[[NSMutableArray alloc]init];
+
+    
+    [_tableView reloadData];
+    
+
 
 }
 
@@ -63,11 +100,6 @@
 
 
 
-
-
-
-
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -76,11 +108,19 @@
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellidentifier];
     
     
-    UILabel *lab=(UILabel *)[cell viewWithTag:101];
     
-    lab.text=tableData[indexPath.row];
+    MyTicketDataModel *ticket=tableData[indexPath.row];
+//    
+//    UILabel *lab=(UILabel *)[cell viewWithTag:101];
+//    lab.text=ticket.service;
+//    
     
-    return cell;
+    cell.textLabel.text=ticket.service;
+    
+       return cell;
+
+
+
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,6 +143,132 @@
 
 
 }
+
+-(void)getdataFromweb
+{
+
+    NSString *str=[NSString stringWithFormat:@"http://simplicitytst.ripple-io.in/Search/Category"];
+    
+    
+    
+    manage = [AFHTTPRequestOperationManager manager];
+    AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    manage.requestSerializer = requestSerializer;
+
+    
+    NSDictionary *paraDICt=[NSJSONSerialization JSONObjectWithData:[ORDER_PARAMETER dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
+    
+    
+        [manage POST:str
+       parameters:paraDICt
+          success:^(AFHTTPRequestOperation *operation, id responseObject){
+              NSData *responseData = [operation responseData];
+              
+              
+           
+              
+            //  NSLog(@"%@",responseData);
+              
+              NSDictionary *mainDict=[NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
+              // NSLog(@"%@",mainDict);
+          
+              NSArray *arr=mainDict[@"aaData"][@"GenericSearchViewModels"];
+              
+              [tableData removeAllObjects];
+          
+              NSMutableArray *tempArr=[[NSMutableArray alloc]init];
+              for (NSDictionary *adict in arr) {
+                  MyTicketDataModel *ticket=[[MyTicketDataModel alloc]init];
+
+                  ticket.service=adict[@"Name"];
+                  
+                 [tableData addObject:ticket];
+              
+             
+              
+              }
+              
+              [_tableView reloadData];
+   
+          
+          
+          
+          }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                            NSLog(@"%@",error);
+          }];
+
+
+
+}
+
+-(void)getservice
+{
+
+    NSString *str=[NSString stringWithFormat:@"http://simplicitytst.ripple-io.in/Search/Category"];
+    
+    
+    
+    manage = [AFHTTPRequestOperationManager manager];
+    AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    manage.requestSerializer = requestSerializer;
+    
+    
+    NSDictionary *paraDICt=[NSJSONSerialization JSONObjectWithData:[TICKETLIST_PARAMETER dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
+    
+    
+    [manage POST:str
+      parameters:paraDICt
+         success:^(AFHTTPRequestOperation *operation, id responseObject){
+             NSData *responseData = [operation responseData];
+             
+             
+             
+             
+             //  NSLog(@"%@",responseData);
+             
+             NSDictionary *mainDict=[NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
+             // NSLog(@"%@",mainDict);
+             
+             NSArray *arr=mainDict[@"aaData"][@"GenericSearchViewModels"];
+             
+             [tableData removeAllObjects];
+             
+             NSMutableArray *tempArr=[[NSMutableArray alloc]init];
+             for (NSDictionary *adict in arr) {
+                 MyTicketDataModel *ticket=[[MyTicketDataModel alloc]init];
+                 
+                 ticket.service=adict[@"Name"];
+                 
+                 [tableData addObject:ticket];
+                 
+                 }
+             
+             [_tableView reloadData];
+             
+             
+             
+             
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"%@",error);
+         }];
+    
+
+
+}
+
+
+
+
+
+
 
 
 

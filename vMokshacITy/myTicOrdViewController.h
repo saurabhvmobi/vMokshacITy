@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyTicketDataModel.h"
+
 
 @interface myTicOrdViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
+
+
+@property(nonatomic,strong)NSString *strDFF;
+
+
+@property(nonatomic,strong)MyTicketDataModel *ticket;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end

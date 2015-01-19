@@ -25,10 +25,27 @@
     // Do any additional setup after loading the view.
 
 
-   Language=@[@"English",@"Dutch",@"German",@"Franch",@"German",@"Spanish",@"Japanese"];
-   Location= @[@"Belgium",@"India",@"US",@"Japan",@"Bulgaria",@"France",@"Germany"];
-   Theame=@[@"Blue Ocean",@"Orange Hue",@"Pink Rose",@"Green Glow"];
+    if ([_selectedSetting isEqualToString:@"Language"]) {
+       tableData=@[@"English",@"Dutch",@"German",@"Franch",@"German",@"Spanish",@"Japanese"];
+    }
+    
+    
+    
+    else if ([_selectedSetting isEqualToString:@"Location"])
+        
+    {
+    tableData= @[@"Belgium",@"India",@"US",@"Japan",@"Bulgaria",@"France",@"Germany"];
+    }
+    
+    else
+    {
+        
+      tableData=@[@"Blue Ocean",@"Orange Hue",@"Pink Rose",@"Green Glow"];
+        
+    }
+    
 
+    
     [_tableView reloadData];
 
 }
@@ -61,36 +78,9 @@
 {
     
    
-    if ([_selectedSetting isEqualToString:@"Language"]) {
-        return [Language count];
-    }
-    
-    
-    
-    else if ([_selectedSetting isEqualToString:@"Location"])
-    
-    {
-        return [Location count];
-
-    }
-    
-    else
-    {
-        return [Theame count];
-    
+    return [tableData count];
     
     }
-    
-    
-    }
-
-
-
-
-
-
-
-
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -102,21 +92,7 @@
     
     UILabel *lab=(UILabel *)[cell viewWithTag:100];
     
-    if ([_selectedSetting isEqualToString:@"Language"]) {
-       lab.text=Language[indexPath.row];
-    }
-    else if ([_selectedSetting isEqualToString:@"Location"])
-    {
-        lab.text=Location[indexPath.row];
-    }
-   
-   else if ([_selectedSetting isEqualToString:@"Theme"] )
-    
-   {
-    lab.text=Theame[indexPath.row];
-   
-   }
-    
+    lab.text=tableData[indexPath.row];
     
     return cell;
 }

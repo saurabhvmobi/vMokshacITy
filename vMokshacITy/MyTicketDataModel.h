@@ -16,4 +16,11 @@
 @property(nonatomic,strong)NSString *status;
 @property(nonatomic,strong)NSString *Date;
 
+@property(nonatomic,strong)NSString *timestamp;
+@property(nonatomic,strong)NSString *ticNum;
+
+
+@property(nonatomic,strong)NSString *service;
+@property(nonatomic,strong)NSString *items;
+
 @end
