@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ToolsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface ToolsViewController : BossClass<UITableViewDataSource,UITableViewDelegate>
 
 @end

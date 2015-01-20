@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewMessageViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface NewMessageViewController : BossClass<UITableViewDelegate,UITableViewDataSource>
 
 @end

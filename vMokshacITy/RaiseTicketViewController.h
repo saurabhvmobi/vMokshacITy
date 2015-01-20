@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RaiseTicketViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>
+@interface RaiseTicketViewController : BossClass<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>
 
 - (IBAction)DoneButtonAction:(id)sender;
 

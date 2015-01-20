@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LanLocTheViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface LanLocTheViewController : BossClass<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property(nonatomic,strong)NSString *selectedSetting;

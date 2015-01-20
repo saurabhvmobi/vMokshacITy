@@ -10,7 +10,7 @@
 #import "MyTicketDataModel.h"
 
 
-@interface myTicOrdViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface myTicOrdViewController : BossClass<UITableViewDelegate,UITableViewDataSource>
 
 
 

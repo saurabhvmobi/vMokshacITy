@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : BossClass<UITableViewDelegate,UITableViewDataSource>
 
 
 - (IBAction)raiseTicketAction:(id)sender;
@@ -23,5 +23,7 @@
 
 - (IBAction)callHelpDeskAction:(id)sender;
 - (IBAction)webClipAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *contanerDashBoard;
+@property (weak, nonatomic) IBOutlet UIView *callview;
 
 @end

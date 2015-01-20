@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PassWordExpViewController : UIViewController
+@interface PassWordExpViewController : BossClass
 
 @end

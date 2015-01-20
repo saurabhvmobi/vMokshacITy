@@ -12,7 +12,7 @@
 
 #import "MessageViewCell.h"
 
-@interface MessageViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface MessageViewController : BossClass<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong)MessageDataModel *dataMModel;
 

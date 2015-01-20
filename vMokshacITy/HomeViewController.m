@@ -13,7 +13,12 @@
 #import "myTicOrdViewController.h"
 
 @interface HomeViewController ()
+{
 
+    NSArray *arr;
+    NSArray *arrimg;
+
+}
 @end
 
 @implementation HomeViewController
@@ -22,7 +27,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    _callview.hidden=YES;
   
+    
+    arr=@[@"HelpDesk",@"Bangalore",@"chenni"];
+    arrimg=@[[UIImage imageNamed:@"call.png"],[UIImage imageNamed:@"call.png"],[UIImage imageNamed:@"call.png"]];
+
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,6 +103,12 @@
 }
 
 - (IBAction)callHelpDeskAction:(id)sender {
+
+    _contanerDashBoard.hidden=YES;
+    _callview.hidden=NO;
+
+
+
 }
 
 - (IBAction)webClipAction:(id)sender {
@@ -123,6 +140,40 @@
     }
 
 }
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+
+    return [arr count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+NSString *cellidentifier=@"cell";
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellidentifier];
+    cell.textLabel.text=arr[indexPath.row];
+    cell.imageView.image=arrimg[indexPath.row];
+
+
+    return cell;
+
+
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    _callview.hidden=YES;
+
+    _contanerDashBoard.hidden=NO;;
+
+}
+
 
 
 

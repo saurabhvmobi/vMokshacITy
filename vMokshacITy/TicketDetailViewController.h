@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TicketDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface TicketDetailViewController : BossClass<UITableViewDataSource,UITableViewDelegate>
 
 
 

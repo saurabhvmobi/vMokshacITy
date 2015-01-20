@@ -476,6 +476,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pVD-4s-GbI" userLabel="callview">
+                                <rect key="frame" x="0.0" y="4" width="320" height="560"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cft-l6-Qhp">
+                                        <rect key="frame" x="40" y="133" width="241" height="171"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zfe-8E-geU">
+                                        <rect key="frame" x="40" y="133" width="241" height="171"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="kNk-8e-EKE">
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kNk-8e-EKE" id="iGc-bN-lEU">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="P4M-MZ-xfb" id="7g2-xp-EDS"/>
+                                            <outlet property="delegate" destination="P4M-MZ-xfb" id="THj-af-IWc"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85676497460000001" green="0.98012021770000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXj-cZ-6hu" userLabel="contanerdashitem">
                                 <rect key="frame" x="0.0" y="148" width="320" height="379"/>
                                 <subviews>
@@ -707,10 +733,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Szm-0n-tNB"/>
                     <navigationItem key="navigationItem" id="Grv-9o-gUz"/>
+                    <connections>
+                        <outlet property="callview" destination="pVD-4s-GbI" id="cbn-TD-ogx"/>
+                        <outlet property="contanerDashBoard" destination="NXj-cZ-6hu" id="Czo-E9-sUS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCd-7V-4Tu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875" y="78"/>
+            <point key="canvasLocation" x="895" y="89"/>
         </scene>
         <!--Tools-->
         <scene sceneID="Ig9-Aq-n9H">
@@ -1097,11 +1127,11 @@
             </objects>
             <point key="canvasLocation" x="-873" y="69"/>
         </scene>
-        <!--Home-->
+        <!--Navigation Controller-->
         <scene sceneID="X2P-fJ-WGA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xkp-2o-qgP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="HTo-mS-izf"/>
+                    <tabBarItem key="tabBarItem" title="" id="HTo-mS-izf"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="fqL-ck-hfv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LjN-vo-QwZ">
@@ -1140,11 +1170,11 @@
             </objects>
             <point key="canvasLocation" x="-77" y="69"/>
         </scene>
-        <!--message-->
+        <!--Navigation Controller-->
         <scene sceneID="QDw-Df-6j4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MI0-MI-5Ph" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="message" id="vdT-p4-Wav"/>
+                    <tabBarItem key="tabBarItem" title="" id="vdT-p4-Wav"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oi4-Zi-ckr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1159,11 +1189,11 @@
             </objects>
             <point key="canvasLocation" x="-62" y="799"/>
         </scene>
-        <!--Ticket-->
+        <!--Navigation Controller-->
         <scene sceneID="9YI-ya-4Sc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e95-l8-g7V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ticket" id="m2q-2m-e5m"/>
+                    <tabBarItem key="tabBarItem" title="" id="m2q-2m-e5m"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aKg-iN-Fhv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1178,11 +1208,11 @@
             </objects>
             <point key="canvasLocation" x="336" y="-786"/>
         </scene>
-        <!--Tools-->
+        <!--Navigation Controller-->
         <scene sceneID="2K4-SL-YfL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fd6-zT-57x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tools" id="eaR-IA-qce"/>
+                    <tabBarItem key="tabBarItem" title="" id="eaR-IA-qce"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PtM-es-9us">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1197,11 +1227,11 @@
             </objects>
             <point key="canvasLocation" x="165" y="-1218"/>
         </scene>
-        <!--Tips-->
+        <!--Navigation Controller-->
         <scene sceneID="oBn-J5-GqY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3qT-r5-rI9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tips" id="fv3-aK-s0N"/>
+                    <tabBarItem key="tabBarItem" title="" id="fv3-aK-s0N"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZwF-52-xdh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1436,7 +1466,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Rhq-a6-G8c"/>
         <segue reference="3EH-ZK-uyn"/>
+        <segue reference="Rhq-a6-G8c"/>
     </inferredMetricsTieBreakers>
 </document>

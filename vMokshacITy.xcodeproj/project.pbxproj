@@ -24,6 +24,7 @@
 		9942E7281A5FB4E40090513C /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E7271A5FB4E40090513C /* SettingViewController.m */; };
 		9942E72B1A5FB9090090513C /* LanLocTheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E72A1A5FB9090090513C /* LanLocTheViewController.m */; };
 		9942E72E1A5FC7010090513C /* RaiseTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */; };
+		994D49071A6E116F002C3464 /* BossClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 994D49061A6E116F002C3464 /* BossClass.m */; };
 		995408D31A63812F009BDAB7 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995408D21A63812F009BDAB7 /* TipsViewController.m */; };
 		99B208911A66712700C78871 /* NewMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B208901A66712700C78871 /* NewMessageViewController.m */; };
 		99B208941A6677B000C78871 /* NewMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B208931A6677B000C78871 /* NewMessageCell.m */; };
@@ -87,6 +88,8 @@
 		9942E72A1A5FB9090090513C /* LanLocTheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanLocTheViewController.m; sourceTree = "<group>"; };
 		9942E72C1A5FC7010090513C /* RaiseTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaiseTicketViewController.h; sourceTree = "<group>"; };
 		9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaiseTicketViewController.m; sourceTree = "<group>"; };
+		994D49051A6E116F002C3464 /* BossClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossClass.h; sourceTree = "<group>"; };
+		994D49061A6E116F002C3464 /* BossClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossClass.m; sourceTree = "<group>"; };
 		995408D11A63812F009BDAB7 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		995408D21A63812F009BDAB7 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
 		99B2088F1A66712700C78871 /* NewMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMessageViewController.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				99C8C0D01A6CCBC7001DCB68 /* AFNetworking */,
 				9932C3E41A5E6277006C90A4 /* AppDelegate.h */,
 				9932C3E51A5E6277006C90A4 /* AppDelegate.m */,
+				994D49051A6E116F002C3464 /* BossClass.h */,
+				994D49061A6E116F002C3464 /* BossClass.m */,
 				9932C3EA1A5E6277006C90A4 /* Main.storyboard */,
 				9932C3E71A5E6277006C90A4 /* ViewController.h */,
 				9932C3E81A5E6277006C90A4 /* ViewController.m */,
@@ -420,6 +425,7 @@
 				9932C40B1A5EA651006C90A4 /* HomeViewController.m in Sources */,
 				9942E7281A5FB4E40090513C /* SettingViewController.m in Sources */,
 				99C8C0E81A6CCBC8001DCB68 /* AFSecurityPolicy.m in Sources */,
+				994D49071A6E116F002C3464 /* BossClass.m in Sources */,
 				99E622791A6949CA007F5581 /* SurveyViewController.m in Sources */,
 				99C8C1061A6CCBD3001DCB68 /* UIWebView+AFNetworking.m in Sources */,
 				99B208941A6677B000C78871 /* NewMessageCell.m in Sources */,

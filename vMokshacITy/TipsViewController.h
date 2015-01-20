@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TipsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface TipsViewController : BossClass<UITableViewDataSource,UITableViewDelegate>
 
 @end

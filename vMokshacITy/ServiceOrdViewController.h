@@ -14,7 +14,7 @@
 
 
 
-@interface ServiceOrdViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface ServiceOrdViewController : BossClass<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

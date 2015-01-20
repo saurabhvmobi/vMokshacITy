@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailMessageViewController : UIViewController
+@interface DetailMessageViewController : BossClass
 
 @end

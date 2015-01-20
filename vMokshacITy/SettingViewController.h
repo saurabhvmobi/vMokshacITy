@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface SettingViewController : BossClass<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
