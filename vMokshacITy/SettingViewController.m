@@ -69,9 +69,7 @@
     lab.text=tableData[indexPath.row];
     
     
-    
-    
-    
+       
     return cell;
 }
 
@@ -80,7 +78,6 @@
 {
 
     }
-
 
 
 

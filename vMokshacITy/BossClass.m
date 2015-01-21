@@ -27,9 +27,30 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 
-    [super viewWillAppear:YES];
+    [super viewWillAppear:animated];
 
+   
 
+    switch ([[NSUserDefaults standardUserDefaults]integerForKey:@"BackgroundTheme"])
+    {
+        case 0:
+             self.view.backgroundColor = [UIColor colorWithRed:.7 green:.92 blue:.96 alpha:1];
+            break;
+        case 1:
+            self.view.backgroundColor=[UIColor colorWithRed:.97 green:.84 blue:.76 alpha:1];
+            break;
+        case 2:
+            self.view.backgroundColor=[UIColor colorWithRed:.93 green:.71 blue:.79 alpha:1];
+            break;
+        case 3:
+            self.view.backgroundColor=[UIColor colorWithRed:.86 green:.91 blue:.79 alpha:1];
+            break;
+            
+        default:
+            break;
+    }
+    
+    
     [[self.tabBarController.tabBar.items objectAtIndex:0]setTitle:@"Home"];
     
     [[self.tabBarController.tabBar.items objectAtIndex:1] setTitle:@"Ticket"];
@@ -57,10 +78,26 @@
 
 
 
-
-
-
-
+- (UIColor *)barColorForIndex:(NSInteger)index
+{
+    switch ([[NSUserDefaults standardUserDefaults] integerForKey:@"BackgroundTheme"]) {
+        case 0:
+            return [UIColor colorWithRed:.13 green:.31 blue:.46 alpha:1];
+            break;
+        case 1:
+            return [UIColor colorWithRed:.9 green:.45 blue:.23 alpha:1];
+            break;
+        case 2:
+            return [UIColor colorWithRed:.76 green:.06 blue:.29 alpha:1];
+            break;
+        case 3:
+            return [UIColor colorWithRed:.55 green:.7 blue:.31 alpha:1];
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
 
 
 

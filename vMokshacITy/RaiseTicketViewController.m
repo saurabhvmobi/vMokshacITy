@@ -39,7 +39,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:YES];
+    [super viewWillAppear:animated];
     
    
     if ([_strDFF isEqualToString:@"placeOrder"]) {
