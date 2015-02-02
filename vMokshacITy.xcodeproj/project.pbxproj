@@ -26,6 +26,8 @@
 		9942E72E1A5FC7010090513C /* RaiseTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */; };
 		994D49071A6E116F002C3464 /* BossClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 994D49061A6E116F002C3464 /* BossClass.m */; };
 		995408D31A63812F009BDAB7 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995408D21A63812F009BDAB7 /* TipsViewController.m */; };
+		99553A031A6FE12400032118 /* TipsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99553A021A6FE12400032118 /* TipsDetailViewController.m */; };
+		9989C6041A78F0F600960AA9 /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9989C6031A78F0F600960AA9 /* DataBase.m */; };
 		99B208911A66712700C78871 /* NewMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B208901A66712700C78871 /* NewMessageViewController.m */; };
 		99B208941A6677B000C78871 /* NewMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B208931A6677B000C78871 /* NewMessageCell.m */; };
 		99C8C0E41A6CCBC8001DCB68 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C8C0D21A6CCBC7001DCB68 /* AFHTTPRequestOperation.m */; };
@@ -51,6 +53,8 @@
 		99E622791A6949CA007F5581 /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E622781A6949CA007F5581 /* SurveyViewController.m */; };
 		99E6227C1A6949F9007F5581 /* PassWordExpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E6227B1A6949F9007F5581 /* PassWordExpViewController.m */; };
 		99E6227F1A694A16007F5581 /* LyncCheckerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E6227E1A694A16007F5581 /* LyncCheckerViewController.m */; };
+		99F2D6A41A7120070003ED7F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2D6A31A7120070003ED7F /* libsqlite3.dylib */; };
+		99FE3C281A7F7F3100A8C7AC /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FE3C271A7F7F3100A8C7AC /* AboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +96,10 @@
 		994D49061A6E116F002C3464 /* BossClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossClass.m; sourceTree = "<group>"; };
 		995408D11A63812F009BDAB7 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		995408D21A63812F009BDAB7 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
+		99553A011A6FE12400032118 /* TipsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsDetailViewController.h; sourceTree = "<group>"; };
+		99553A021A6FE12400032118 /* TipsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsDetailViewController.m; sourceTree = "<group>"; };
+		9989C6021A78F0F600960AA9 /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBase.h; sourceTree = "<group>"; };
+		9989C6031A78F0F600960AA9 /* DataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBase.m; sourceTree = "<group>"; };
 		99B2088F1A66712700C78871 /* NewMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMessageViewController.h; sourceTree = "<group>"; };
 		99B208901A66712700C78871 /* NewMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMessageViewController.m; sourceTree = "<group>"; };
 		99B208921A6677B000C78871 /* NewMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMessageCell.h; sourceTree = "<group>"; };
@@ -145,6 +153,9 @@
 		99E6227B1A6949F9007F5581 /* PassWordExpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassWordExpViewController.m; sourceTree = "<group>"; };
 		99E6227D1A694A16007F5581 /* LyncCheckerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyncCheckerViewController.h; sourceTree = "<group>"; };
 		99E6227E1A694A16007F5581 /* LyncCheckerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyncCheckerViewController.m; sourceTree = "<group>"; };
+		99F2D6A31A7120070003ED7F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		99FE3C261A7F7F3000A8C7AC /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		99FE3C271A7F7F3100A8C7AC /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F2D6A41A7120070003ED7F /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +173,7 @@
 		9932C3D41A5E6277006C90A4 = {
 			isa = PBXGroup;
 			children = (
+				99F2D6A31A7120070003ED7F /* libsqlite3.dylib */,
 				9932C3DF1A5E6277006C90A4 /* vMokshacITy */,
 				9932C3F91A5E6277006C90A4 /* vMokshacITyTests */,
 				9932C3DE1A5E6277006C90A4 /* Products */,
@@ -203,11 +216,15 @@
 				9932C4101A5EAEF5006C90A4 /* DetailMessageViewController.m */,
 				9932C4121A5EAF2F006C90A4 /* MessageDataModel.h */,
 				9932C4131A5EAF30006C90A4 /* MessageDataModel.m */,
+				99FE3C261A7F7F3000A8C7AC /* AboutViewController.h */,
+				99FE3C271A7F7F3100A8C7AC /* AboutViewController.m */,
 				99E6220C1A68FE60007F5581 /* Ticket */,
 				9942E7231A5F92300090513C /* ToolsViewController.h */,
 				9942E7241A5F92300090513C /* ToolsViewController.m */,
 				995408D11A63812F009BDAB7 /* TipsViewController.h */,
 				995408D21A63812F009BDAB7 /* TipsViewController.m */,
+				99553A011A6FE12400032118 /* TipsDetailViewController.h */,
+				99553A021A6FE12400032118 /* TipsDetailViewController.m */,
 				9942E7261A5FB4E40090513C /* SettingViewController.h */,
 				9942E7271A5FB4E40090513C /* SettingViewController.m */,
 				9942E7291A5FB9090090513C /* LanLocTheViewController.h */,
@@ -218,6 +235,8 @@
 				99E6227B1A6949F9007F5581 /* PassWordExpViewController.m */,
 				99E6227D1A694A16007F5581 /* LyncCheckerViewController.h */,
 				99E6227E1A694A16007F5581 /* LyncCheckerViewController.m */,
+				9989C6021A78F0F600960AA9 /* DataBase.h */,
+				9989C6031A78F0F600960AA9 /* DataBase.m */,
 				9932C3ED1A5E6277006C90A4 /* Images.xcassets */,
 				9932C3EF1A5E6277006C90A4 /* LaunchScreen.xib */,
 				9932C3E01A5E6277006C90A4 /* Supporting Files */,
@@ -420,6 +439,7 @@
 				99C8C0EB1A6CCBC8001DCB68 /* AFURLResponseSerialization.m in Sources */,
 				99C8C0EA1A6CCBC8001DCB68 /* AFURLRequestSerialization.m in Sources */,
 				9942E7251A5F92300090513C /* ToolsViewController.m in Sources */,
+				99FE3C281A7F7F3100A8C7AC /* AboutViewController.m in Sources */,
 				99C8C1031A6CCBD3001DCB68 /* UIImageView+AFNetworking.m in Sources */,
 				9932C3E31A5E6277006C90A4 /* main.m in Sources */,
 				9932C40B1A5EA651006C90A4 /* HomeViewController.m in Sources */,
@@ -427,10 +447,12 @@
 				99C8C0E81A6CCBC8001DCB68 /* AFSecurityPolicy.m in Sources */,
 				994D49071A6E116F002C3464 /* BossClass.m in Sources */,
 				99E622791A6949CA007F5581 /* SurveyViewController.m in Sources */,
+				9989C6041A78F0F600960AA9 /* DataBase.m in Sources */,
 				99C8C1061A6CCBD3001DCB68 /* UIWebView+AFNetworking.m in Sources */,
 				99B208941A6677B000C78871 /* NewMessageCell.m in Sources */,
 				99C8C1001A6CCBD3001DCB68 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				99E6220F1A68FF39007F5581 /* MyTicketDataModel.m in Sources */,
+				99553A031A6FE12400032118 /* TipsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

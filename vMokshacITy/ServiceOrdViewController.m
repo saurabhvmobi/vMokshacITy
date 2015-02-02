@@ -37,7 +37,7 @@
     // Do any additional setup after loading the view.
 
     
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+   // MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
       [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
@@ -168,8 +168,6 @@
               NSData *responseData = [operation responseData];
               
               
-           
-              
             //  NSLog(@"%@",responseData);
               
               NSDictionary *mainDict=[NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
@@ -179,7 +177,7 @@
               
               [tableData removeAllObjects];
           
-              NSMutableArray *tempArr=[[NSMutableArray alloc]init];
+            //  NSMutableArray *tempArr=[[NSMutableArray alloc]init];
               for (NSDictionary *adict in arr) {
                   MyTicketDataModel *ticket=[[MyTicketDataModel alloc]init];
 
@@ -190,6 +188,9 @@
              
               
               }
+              
+             
+              
               
               [_tableView reloadData];
    

@@ -257,7 +257,18 @@ else
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 
-  [self performSegueWithIdentifier:@"myTicketList_segue" sender:nil];  
+  
+    if ([_strDFF isEqualToString:@"placeOrder"]) {
+        [self performSegueWithIdentifier:@"hometomyorder" sender:nil];
+ 
+    }
+    
+    else
+        
+    {
+    
+    [self performSegueWithIdentifier:@"myTicketList_segue" sender:nil];
+    }
     
 }
 
@@ -306,5 +317,66 @@ else
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

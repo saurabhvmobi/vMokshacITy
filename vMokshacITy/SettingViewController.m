@@ -14,6 +14,8 @@
 {
 
     NSArray *tableData;
+
+    NSArray *tableimg;
 }
 @end
 
@@ -25,7 +27,7 @@
 
 
     tableData=@[@"Language",@"Location",@"Theme"];
-
+    tableimg=@[@"lacation",@"language",@"language"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +71,8 @@
     lab.text=tableData[indexPath.row];
     
     
+    UIImageView *img=(UIImageView *)[cell viewWithTag:100];
+    img.image = [UIImage imageNamed:tableimg[indexPath.row]];
        
     return cell;
 }

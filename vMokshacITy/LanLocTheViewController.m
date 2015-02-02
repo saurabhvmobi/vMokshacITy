@@ -7,6 +7,8 @@
 //
 
 #import "LanLocTheViewController.h"
+#define LANGUAGE @"{\"request\":{\"Name\":\"\",\"GenericSearchViewModel\":{\"Name\":\"\"}}}"
+
 
 @interface LanLocTheViewController ()
 {
@@ -14,7 +16,7 @@
      NSArray *Location;
      NSArray *Theame;
     
-    NSArray *tableData;
+    NSMutableArray *tableData;
 
 
     NSInteger selectedRow;
@@ -29,7 +31,10 @@
 
 
     if ([_selectedSetting isEqualToString:@"Language"]) {
-       tableData=@[@"English",@"Dutch",@"German",@"Franch",@"German",@"Spanish",@"Japanese"];
+      // tableData=@[@"English",@"Dutch",@"German",@"Franch",@"German",@"Spanish",@"Japanese"];
+    
+        [self getDataFrmoWeb];
+    
     }
     
     
@@ -119,18 +124,9 @@
     bgColorView.backgroundColor = [self barColorForIndex:selectedRow];
     [cell setSelectedBackgroundView:bgColorView];
     
-
-    
-    
-    
-    
-    return cell;
-
-
+   return cell;
 
 }
-
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
@@ -150,23 +146,68 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 - (IBAction)cancelButtonAction:(id)sender {
 
     [self dismissViewControllerAnimated:YES completion:nil];
 
 
 }
+
+
+-(void)getDataFrmoWeb
+{
+    NSString *urlstr=[NSString stringWithFormat:@"http://simplicitytst.ripple-io.in/Search/Language"];
+
+    
+    AFHTTPRequestOperationManager  *manage = [AFHTTPRequestOperationManager manager];
+    AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    manage.requestSerializer = requestSerializer;
+    
+    
+    NSDictionary *paraDICt=[NSJSONSerialization JSONObjectWithData:[LANGUAGE dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
+    
+    [manage POST:urlstr parameters:paraDICt
+         success:^(AFHTTPRequestOperation *operation, id responseObject){
+             NSData *responseData = [operation responseData];
+             //  NSLog(@"%@",responseData);
+             
+             NSDictionary *mainDict=[NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
+             // NSLog(@"%@",mainDict);
+             NSArray *mainarr=mainDict[@"aaData"][@"GenericSearchViewModels"];
+             
+             tableData=[[NSMutableArray alloc]init];
+             
+             for (NSDictionary *adict in mainarr) {
+                 
+                 
+                 NSString *str=adict[@"Name"];
+                 NSLog(@"%@",str);
+                 [tableData addObject:str];
+                 
+             }
+             
+             [_tableView reloadData];
+             
+             
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"%@",error);
+         }];
+    
+    
+    
+}
+
+
+
+    
+    
+
+
+
+
+
 @end

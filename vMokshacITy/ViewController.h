@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : BossClass
+@interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imglogo;
 
 @property (weak, nonatomic) IBOutlet UITextField *userName;

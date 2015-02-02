@@ -70,12 +70,12 @@
 
 - (IBAction)raiseTicketAction:(id)sender {
 
-    [self.tabBarController setSelectedIndex:1];
+    //[self.tabBarController setSelectedIndex:1];
 }
 
 - (IBAction)messageAction:(id)sender {
     
-    [self.tabBarController setSelectedIndex:2];
+    [self.tabBarController setSelectedIndex:1];
 
 
 }
