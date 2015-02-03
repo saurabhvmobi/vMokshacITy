@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "BossClass.h"
+#import "RateView.h"
 
 
-@interface AboutViewController : BossClass
+
+
+
+
+
+@interface AboutViewController : BossClass<RateViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
 @property (weak, nonatomic) IBOutlet UIImageView *leftimglogo;
@@ -24,19 +30,21 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labrightRate;
 @property (weak, nonatomic) IBOutlet UIImageView *leftStar;
-@property (weak, nonatomic) IBOutlet UIImageView *rightStar;
+
 @property (weak, nonatomic) IBOutlet UILabel *totalCountlable;
 @property (weak, nonatomic) IBOutlet UILabel *totallab;
 @property (weak, nonatomic) IBOutlet UIButton *clicktoratebutton;
 @property (weak, nonatomic) IBOutlet UIView *leftStarView;
-@property (weak, nonatomic) IBOutlet UIView *rightStarView;
+
 @property (weak, nonatomic) IBOutlet UIButton *writeReviewButton;
 - (IBAction)writeReviewAction:(id)sender;
 - (IBAction)clickToRateAction:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextView *txtViewForWritingReview;
+@property (weak, nonatomic) IBOutlet RateView *rateView;
 
 
+- (IBAction)RateAndReviewSubmitButton:(id)sender;
 
 
 

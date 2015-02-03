@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SurveyViewController : BossClass
+@interface SurveyViewController : UIViewController
 
 @end

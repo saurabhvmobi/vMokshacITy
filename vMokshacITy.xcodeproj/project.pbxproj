@@ -25,6 +25,10 @@
 		9942E72B1A5FB9090090513C /* LanLocTheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E72A1A5FB9090090513C /* LanLocTheViewController.m */; };
 		9942E72E1A5FC7010090513C /* RaiseTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */; };
 		994D49071A6E116F002C3464 /* BossClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 994D49061A6E116F002C3464 /* BossClass.m */; };
+		9951E7B21A80B5D6002BAE07 /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9951E7B11A80B5D6002BAE07 /* RateView.m */; };
+		9951E7B61A80DB14002BAE07 /* kermit_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 9951E7B31A80DB14002BAE07 /* kermit_empty.png */; };
+		9951E7B71A80DB14002BAE07 /* kermit_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 9951E7B41A80DB14002BAE07 /* kermit_full.png */; };
+		9951E7B81A80DB14002BAE07 /* kermit_half.png in Resources */ = {isa = PBXBuildFile; fileRef = 9951E7B51A80DB14002BAE07 /* kermit_half.png */; };
 		995408D31A63812F009BDAB7 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995408D21A63812F009BDAB7 /* TipsViewController.m */; };
 		99553A031A6FE12400032118 /* TipsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99553A021A6FE12400032118 /* TipsDetailViewController.m */; };
 		9989C6041A78F0F600960AA9 /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9989C6031A78F0F600960AA9 /* DataBase.m */; };
@@ -94,6 +98,11 @@
 		9942E72D1A5FC7010090513C /* RaiseTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaiseTicketViewController.m; sourceTree = "<group>"; };
 		994D49051A6E116F002C3464 /* BossClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossClass.h; sourceTree = "<group>"; };
 		994D49061A6E116F002C3464 /* BossClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossClass.m; sourceTree = "<group>"; };
+		9951E7B01A80B5D6002BAE07 /* RateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateView.h; sourceTree = "<group>"; };
+		9951E7B11A80B5D6002BAE07 /* RateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateView.m; sourceTree = "<group>"; };
+		9951E7B31A80DB14002BAE07 /* kermit_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kermit_empty.png; sourceTree = "<group>"; };
+		9951E7B41A80DB14002BAE07 /* kermit_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kermit_full.png; sourceTree = "<group>"; };
+		9951E7B51A80DB14002BAE07 /* kermit_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kermit_half.png; sourceTree = "<group>"; };
 		995408D11A63812F009BDAB7 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		995408D21A63812F009BDAB7 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
 		99553A011A6FE12400032118 /* TipsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsDetailViewController.h; sourceTree = "<group>"; };
@@ -213,11 +222,16 @@
 				9932C4151A5EBE3B006C90A4 /* MessageViewCell.h */,
 				9932C4161A5EBE3B006C90A4 /* MessageViewCell.m */,
 				9932C40F1A5EAEF5006C90A4 /* DetailMessageViewController.h */,
+				9951E7B31A80DB14002BAE07 /* kermit_empty.png */,
+				9951E7B41A80DB14002BAE07 /* kermit_full.png */,
+				9951E7B51A80DB14002BAE07 /* kermit_half.png */,
 				9932C4101A5EAEF5006C90A4 /* DetailMessageViewController.m */,
 				9932C4121A5EAF2F006C90A4 /* MessageDataModel.h */,
 				9932C4131A5EAF30006C90A4 /* MessageDataModel.m */,
 				99FE3C261A7F7F3000A8C7AC /* AboutViewController.h */,
 				99FE3C271A7F7F3100A8C7AC /* AboutViewController.m */,
+				9951E7B01A80B5D6002BAE07 /* RateView.h */,
+				9951E7B11A80B5D6002BAE07 /* RateView.m */,
 				99E6220C1A68FE60007F5581 /* Ticket */,
 				9942E7231A5F92300090513C /* ToolsViewController.h */,
 				9942E7241A5F92300090513C /* ToolsViewController.m */,
@@ -397,6 +411,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9932C3EC1A5E6277006C90A4 /* Main.storyboard in Resources */,
+				9951E7B61A80DB14002BAE07 /* kermit_empty.png in Resources */,
+				9951E7B81A80DB14002BAE07 /* kermit_half.png in Resources */,
+				9951E7B71A80DB14002BAE07 /* kermit_full.png in Resources */,
 				9932C3F11A5E6277006C90A4 /* LaunchScreen.xib in Resources */,
 				9932C3EE1A5E6277006C90A4 /* Images.xcassets in Resources */,
 			);
@@ -447,6 +464,7 @@
 				99C8C0E81A6CCBC8001DCB68 /* AFSecurityPolicy.m in Sources */,
 				994D49071A6E116F002C3464 /* BossClass.m in Sources */,
 				99E622791A6949CA007F5581 /* SurveyViewController.m in Sources */,
+				9951E7B21A80B5D6002BAE07 /* RateView.m in Sources */,
 				9989C6041A78F0F600960AA9 /* DataBase.m in Sources */,
 				99C8C1061A6CCBD3001DCB68 /* UIWebView+AFNetworking.m in Sources */,
 				99B208941A6677B000C78871 /* NewMessageCell.m in Sources */,

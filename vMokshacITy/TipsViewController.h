@@ -11,4 +11,5 @@
 @interface TipsViewController : BossClass<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableVIew;
 
+
 @end

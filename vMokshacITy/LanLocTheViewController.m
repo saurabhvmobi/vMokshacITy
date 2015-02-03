@@ -146,6 +146,22 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 - (IBAction)cancelButtonAction:(id)sender {
 
     [self dismissViewControllerAnimated:YES completion:nil];

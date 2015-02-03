@@ -12,7 +12,7 @@
 {
 
     NSString *textviewstr;
-
+    BOOL buttonaction;
 
 
 }
@@ -22,13 +22,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-
+    self.rateView.notSelectedImage = [UIImage imageNamed:@"kermit_empty.png"];
+    self.rateView.halfSelectedImage = [UIImage imageNamed:@"kermit_half.png"];
+    self.rateView.fullSelectedImage = [UIImage imageNamed:@"kermit_full.png"];
+    self.rateView.rating = 0;
+    self.rateView.editable = YES;
+    self.rateView.maxRating = 5;
+    self.rateView.delegate = self;
+    
+    
+    
+    
+    
+    
     [self.scroll setScrollEnabled:YES];
     [self.scroll setContentSize:CGSizeMake(320, 700)];
 
-
-textviewstr=@"This mobile app was developed in a partnership between Vmoksha Technologies and the UCB Mobility Team.  If you have an idea for a new app, or questions about app development, please contact the UCB Mobility Team at mobility.apple@ucb.com and we will schedule a meeting to understand your needs.  For more information, see www.vmokshagroup.com.";
+  
+    buttonaction=YES;
+    
+    
+   textviewstr=@"This mobile app was developed in a partnership between Vmoksha Technologies and the UCB Mobility Team.  If you have an idea for a new app, or questions about app development, please contact the UCB Mobility Team at mobility.apple@ucb.com and we will schedule a meeting to understand your needs.  For more information, see www.vmokshagroup.com.";
     
     _texttView.text=textviewstr;
   self.navigationItem.title=@"About";
@@ -54,10 +68,44 @@ textviewstr=@"This mobile app was developed in a partnership between Vmoksha Tec
 
 - (IBAction)writeReviewAction:(id)sender {
 
-   _txtViewForWritingReview.hidden=NO;
+    if (buttonaction==YES) {
+          _txtViewForWritingReview.hidden=NO;
+    
+        buttonaction=NO;
+    }
+    else
+    {
+        _txtViewForWritingReview.hidden=YES;;
+        buttonaction=YES;
+    }
+    
+  
 
 }
 
 - (IBAction)clickToRateAction:(id)sender {
+
 }
+
+- (IBAction)RateAndReviewSubmitButton:(id)sender {
+
+UIAlertView *alt=[[UIAlertView alloc]initWithTitle:@"!!!! Thanks  !!!!" message:@"Thanks for Giving Rating" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+    [alt show];
+    
+}
+
+- (void)rateView:(RateView *)rateView ratingDidChange:(float)rating {
+    self.labrightRate.text = [NSString stringWithFormat:@"%f", rating];
+}
+
+
+
+
+
+
+
+
+
+
+
 @end

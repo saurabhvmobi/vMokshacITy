@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LyncCheckerViewController : BossClass
+@interface LyncCheckerViewController : UIViewController
 
 @end
