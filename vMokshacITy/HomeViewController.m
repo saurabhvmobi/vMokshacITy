@@ -27,6 +27,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    
+    [self.scroll setScrollEnabled:YES];
+    [self.scroll setContentSize:CGSizeMake(320, 700)];
+
+    
+    
+    
     _callview.hidden=YES;
   
     

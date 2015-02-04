@@ -13,6 +13,8 @@
 {
 
     NSArray *tableData;
+
+    NSArray *imgtbldata;
 }
 
 @end
@@ -25,6 +27,8 @@
 
 
     tableData =@[@"Lync Connection Checker",@"Days Left for Password expiry",@"Survey"];
+
+    imgtbldata=@[@"LyncToolsIcon",@"PasswordResetToolImage",@"SurveyToolIcon"];
 
 }
 
@@ -66,6 +70,11 @@
    
     UILabel *lab=(UILabel *)[cell viewWithTag:101];
     lab.text=tableData[indexPath.row];
+    
+    UIImageView *img=(UIImageView *)[cell viewWithTag:100];
+    img.image = [UIImage imageNamed:imgtbldata[indexPath.row]];
+    
+    
     
     return cell;
 }

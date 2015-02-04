@@ -42,7 +42,7 @@
     buttonaction=YES;
     
     
-   textviewstr=@"This mobile app was developed in a partnership between Vmoksha Technologies and the UCB Mobility Team.  If you have an idea for a new app, or questions about app development, please contact the UCB Mobility Team at mobility.apple@ucb.com and we will schedule a meeting to understand your needs.  For more information, see www.vmokshagroup.com.";
+   textviewstr=@"This mobile app was developed in a partnership between Vmoksha Technologies and the UCB ";
     
     _texttView.text=textviewstr;
   self.navigationItem.title=@"About";

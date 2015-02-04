@@ -27,7 +27,7 @@
 
 
     tableData=@[@"Language",@"Location",@"Theme"];
-    tableimg=@[@"lacation",@"language",@"language"];
+    tableimg=@[@"lacation",@"language",@"themes"];
 }
 
 - (void)didReceiveMemoryWarning {

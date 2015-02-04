@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : BossClass<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
 
 - (IBAction)raiseTicketAction:(id)sender;
