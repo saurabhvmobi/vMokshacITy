@@ -9,6 +9,8 @@
 #import "ServicesViewController.h"
 #define WEB_CLIPS @""
 
+#define IMAGE_SEARCH_API
+
 
 @interface ServicesViewController ()
 
@@ -18,6 +20,8 @@
     AFHTTPRequestOperationManager *manager;
 
 
+    
+    
 }
 
 
@@ -124,8 +128,12 @@
                serviceModel *serv=[[serviceModel alloc]init];
                 
                  serv.serviceName=adict[@"Description"];
+                 
+                 serv.documentCode=adict[@"DocumentCode"];
+             
                  [labarrData addObject:serv];
-                
+             
+             
              
              }
              
@@ -142,12 +150,90 @@
          
          }];
     
+    }
+
+
+
+-(void)getingDataImage
+{
+
+    serviceModel *model=[[serviceModel alloc]init];
     
+    
+    
+    NSString *str=[NSString stringWithFormat:@"IMAGE_SEARCH_API"];
+    
+  //  NSString *mainUrl=[str stringByAppendingString:@"%@",(model.documentCode)];
+    
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    
+    
+    
+    manager = [AFHTTPRequestOperationManager manager];
+    AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    manager.requestSerializer = requestSerializer;
+    
+    
+    
+    NSDictionary *paraDICt=[NSJSONSerialization JSONObjectWithData:[WEB_CLIPS dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
+    
+    
+    [manager POST:str
+       parameters:paraDICt
+          success:^(AFHTTPRequestOperation *operation, id responseObject){
+              NSData *responseData = [operation responseData];
+              
+              
+              //  NSLog(@"%@",responseData);
+              
+              NSDictionary *mainDict=[NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
+              // NSLog(@"%@",mainDict);
+              
+              NSArray *arr=mainDict[@"aaData"][@"WebClips"];
+              
+              
+              
+              for (NSDictionary *adict in arr) {
+                  
+                  
+                  serviceModel *serv=[[serviceModel alloc]init];
+                  
+                  serv.serviceName=adict[@"Description"];
+                  
+                  serv.documentCode=adict[@"DocumentCode"];
+                  
+                  [labarrData addObject:serv];
+                  
+                  
+                  
+              }
+              
+              
+              [_collectionView reloadData];
+              
+              [MBProgressHUD hideHUDForView:self.view animated:YES];
+              
+          }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              NSLog(@"%@",error);
+              
+              [MBProgressHUD hideHUDForView:self.view animated:YES];
+              
+          }];
 
 
 }
-
-
 
 
 

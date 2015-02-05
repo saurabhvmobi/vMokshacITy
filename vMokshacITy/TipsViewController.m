@@ -131,12 +131,8 @@
                      NSString *str=adict[@"Name"];
                      NSLog(@"%@",str);
                      [tableData addObject:str];
-                     
- 
+                     }
                  }
-                 
-                 
-                }
              
              [_tableVIew reloadData];
            
@@ -149,10 +145,7 @@
         
              [MBProgressHUD hideHUDForView:self.view animated:YES];
          }];
-    
-
-
-}
+    }
 
 
 

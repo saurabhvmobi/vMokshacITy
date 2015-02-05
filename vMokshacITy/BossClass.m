@@ -30,22 +30,7 @@
     [super viewWillAppear:animated];
 
    
-        
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    switch ([[NSUserDefaults standardUserDefaults]integerForKey:@"BackgroundTheme"])
+        switch ([[NSUserDefaults standardUserDefaults]integerForKey:@"BackgroundTheme"])
     {
         case 0:
              self.view.backgroundColor = [UIColor colorWithRed:.7 green:.92 blue:.96 alpha:1];

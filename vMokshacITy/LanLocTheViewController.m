@@ -123,6 +123,9 @@
     bgColorView.backgroundColor = [self barColorForIndex:selectedRow];
     [cell setSelectedBackgroundView:bgColorView];
     
+    
+    //[_tableView reloadData];
+    
    return cell;
 
 }

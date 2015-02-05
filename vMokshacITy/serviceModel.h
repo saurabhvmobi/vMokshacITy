@@ -13,4 +13,6 @@
 
 @property(nonatomic,strong)NSString *serviceName;
 
+@property(nonatomic,strong)NSString *documentCode;
+
 @end
