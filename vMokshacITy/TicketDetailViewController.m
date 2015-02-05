@@ -11,6 +11,8 @@
 @interface TicketDetailViewController ()
 {
     NSArray *leftArray;
+    NSInteger selectedrow;
+
 }
 
 @end
@@ -75,6 +77,11 @@ else
     
     
     
+    UIView *bgColorView = [[UIView alloc]init];
+    bgColorView.backgroundColor = [self barColorForIndex:selectedrow];
+    [cell setSelectedBackgroundView:bgColorView];
+    
+
     
     
 

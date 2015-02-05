@@ -133,7 +133,7 @@
     [self refresh];
 }
 
-- (void)setRating:(float)rating {
+- (void)setRating:(NSInteger)rating {
     _rating = rating;
     [self refresh];
 }

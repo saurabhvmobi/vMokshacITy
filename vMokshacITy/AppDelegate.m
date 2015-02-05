@@ -21,19 +21,48 @@
     
       [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     
-    
+    [[UITabBar appearance]setBarTintColor:[UIColor whiteColor]];
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     
     
-    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:.55 green:.7 blue:.31 alpha:1]];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:.55 green:.7 blue:.31 alpha:1]];
     
    [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
         
-    
+    switch ([[NSUserDefaults standardUserDefaults]integerForKey:@"BackgroundTheme"]) {
+        case 0:
+            [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:.13 green:.31 blue:.46 alpha:1]];
+            [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:.13 green:.31 blue:.46 alpha:1]];
+
+            break;
+        case 1:
+        
+            [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:.9 green:.45 blue:.23 alpha:1]];
+            [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:.9 green:.45 blue:.23 alpha:1]];
+            break;
+        
+        case 2:
+        
+            [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:.76 green:.06 blue:.29 alpha:1]];
+            [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:.76 green:.06 blue:.29 alpha:1]];
+        
+            
+            break;
+            
+            case 3:
+            
+            [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:.55 green:.7 blue:.31 alpha:1]];
+
+             [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:.55 green:.7 blue:.31 alpha:1]];
+
+            
+            break;
+            
+        default:
+            break;
+    }
     
     
     

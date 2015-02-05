@@ -129,7 +129,11 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
+    return 44;
+}
 
 
 
@@ -194,12 +198,17 @@
               
               [_tableView reloadData];
    
-          
+           [MBProgressHUD hideHUDForView:self.view animated:YES];
           
           
           }
           failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                             NSLog(@"%@",error);
+          
+          
+           [MBProgressHUD hideHUDForView:self.view animated:YES];
+          
+          
           }];
 
 
@@ -253,12 +262,15 @@
              
              [_tableView reloadData];
              
-             
+              [MBProgressHUD hideHUDForView:self.view animated:YES];
              
              
          }
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
              NSLog(@"%@",error);
+        
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+         
          }];
     
 

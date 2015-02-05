@@ -13,6 +13,9 @@
 @interface myTicOrdViewController ()
 {
     NSMutableArray *tableData;
+
+    NSInteger selectedrow;
+
 }
 @end
 
@@ -61,12 +64,12 @@
     
     
     if ([_strDFF isEqualToString:@"placeOrder"]) {
-        self.navigationItem.title = @"Place Order";
+        self.navigationItem.title = @"My Order";
         
     }
     else
     {
-        self.navigationItem.title = @"Raise Ticket";
+        self.navigationItem.title = @"My Ticket";
     }
     
     
@@ -129,6 +132,15 @@
     
     UILabel *labtimest=(UILabel *)[cell viewWithTag:105];
     labtimest.text= ticket.timestamp;
+    
+    
+    
+    
+    
+    UIView *bgColorView = [[UIView alloc]init];
+    bgColorView.backgroundColor = [self barColorForIndex:selectedrow];
+    [cell setSelectedBackgroundView:bgColorView];
+
     
     
     

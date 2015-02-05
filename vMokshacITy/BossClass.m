@@ -10,8 +10,8 @@
 
 @interface BossClass ()
 
-@end
 
+@end
 @implementation BossClass
 
 - (void)viewDidLoad {
@@ -30,6 +30,20 @@
     [super viewWillAppear:animated];
 
    
+        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     switch ([[NSUserDefaults standardUserDefaults]integerForKey:@"BackgroundTheme"])
     {
@@ -75,6 +89,21 @@
    
     [[[self.tabBarController.viewControllers objectAtIndex:4] tabBarItem]setFinishedSelectedImage:[UIImage imageNamed:@"Commercial-02.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"Commercial-02.png"]];
    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

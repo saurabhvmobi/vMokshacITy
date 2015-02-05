@@ -12,7 +12,6 @@
 		9932C3E31A5E6277006C90A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C3E21A5E6277006C90A4 /* main.m */; };
 		9932C3E61A5E6277006C90A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C3E51A5E6277006C90A4 /* AppDelegate.m */; };
 		9932C3E91A5E6277006C90A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C3E81A5E6277006C90A4 /* ViewController.m */; };
-		9932C3EC1A5E6277006C90A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9932C3EA1A5E6277006C90A4 /* Main.storyboard */; };
 		9932C3EE1A5E6277006C90A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9932C3ED1A5E6277006C90A4 /* Images.xcassets */; };
 		9932C3F11A5E6277006C90A4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9932C3EF1A5E6277006C90A4 /* LaunchScreen.xib */; };
 		9932C40B1A5EA651006C90A4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C40A1A5EA651006C90A4 /* HomeViewController.m */; };
@@ -20,6 +19,7 @@
 		9932C4111A5EAEF5006C90A4 /* DetailMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C4101A5EAEF5006C90A4 /* DetailMessageViewController.m */; };
 		9932C4141A5EAF30006C90A4 /* MessageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C4131A5EAF30006C90A4 /* MessageDataModel.m */; };
 		9932C4171A5EBE3B006C90A4 /* MessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9932C4161A5EBE3B006C90A4 /* MessageViewCell.m */; };
+		99337E0E1A832BC20056ADBC /* TipsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99337E0D1A832BC20056ADBC /* TipsViewCell.m */; };
 		9934828C1A81E77A00A43401 /* ServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9934828B1A81E77A00A43401 /* ServicesViewController.m */; };
 		9934828F1A82079E00A43401 /* serviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9934828E1A82079E00A43401 /* serviceModel.m */; };
 		9942E7251A5F92300090513C /* ToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942E7241A5F92300090513C /* ToolsViewController.m */; };
@@ -30,6 +30,9 @@
 		9951E7B21A80B5D6002BAE07 /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9951E7B11A80B5D6002BAE07 /* RateView.m */; };
 		995408D31A63812F009BDAB7 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995408D21A63812F009BDAB7 /* TipsViewController.m */; };
 		99553A031A6FE12400032118 /* TipsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99553A021A6FE12400032118 /* TipsDetailViewController.m */; };
+		9975B6D51A834A02009427FF /* TipsDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9975B6D41A834A02009427FF /* TipsDataModel.m */; };
+		9975B6D81A83563B009427FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9975B6D61A83563B009427FF /* Main.storyboard */; };
+		9975B6DB1A837DD4009427FF /* TipsCatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9975B6DA1A837DD4009427FF /* TipsCatListViewController.m */; };
 		9989C6041A78F0F600960AA9 /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9989C6031A78F0F600960AA9 /* DataBase.m */; };
 		99B208911A66712700C78871 /* NewMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B208901A66712700C78871 /* NewMessageViewController.m */; };
 		99B208941A6677B000C78871 /* NewMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B208931A6677B000C78871 /* NewMessageCell.m */; };
@@ -72,7 +75,6 @@
 		9932C3E51A5E6277006C90A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9932C3E71A5E6277006C90A4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9932C3E81A5E6277006C90A4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9932C3EB1A5E6277006C90A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9932C3ED1A5E6277006C90A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9932C3F01A5E6277006C90A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9932C3FB1A5E6277006C90A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 		9932C4131A5EAF30006C90A4 /* MessageDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDataModel.m; sourceTree = "<group>"; };
 		9932C4151A5EBE3B006C90A4 /* MessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewCell.h; sourceTree = "<group>"; };
 		9932C4161A5EBE3B006C90A4 /* MessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewCell.m; sourceTree = "<group>"; };
+		99337E0C1A832BC20056ADBC /* TipsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewCell.h; sourceTree = "<group>"; };
+		99337E0D1A832BC20056ADBC /* TipsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewCell.m; sourceTree = "<group>"; };
 		9934828A1A81E77A00A43401 /* ServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesViewController.h; sourceTree = "<group>"; };
 		9934828B1A81E77A00A43401 /* ServicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesViewController.m; sourceTree = "<group>"; };
 		9934828D1A82079E00A43401 /* serviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serviceModel.h; sourceTree = "<group>"; };
@@ -107,6 +111,11 @@
 		995408D21A63812F009BDAB7 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
 		99553A011A6FE12400032118 /* TipsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsDetailViewController.h; sourceTree = "<group>"; };
 		99553A021A6FE12400032118 /* TipsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsDetailViewController.m; sourceTree = "<group>"; };
+		9975B6D31A834A02009427FF /* TipsDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsDataModel.h; sourceTree = "<group>"; };
+		9975B6D41A834A02009427FF /* TipsDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsDataModel.m; sourceTree = "<group>"; };
+		9975B6D71A83563B009427FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9975B6D91A837DD4009427FF /* TipsCatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsCatListViewController.h; sourceTree = "<group>"; };
+		9975B6DA1A837DD4009427FF /* TipsCatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsCatListViewController.m; sourceTree = "<group>"; };
 		9989C6021A78F0F600960AA9 /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBase.h; sourceTree = "<group>"; };
 		9989C6031A78F0F600960AA9 /* DataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBase.m; sourceTree = "<group>"; };
 		99B2088F1A66712700C78871 /* NewMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMessageViewController.h; sourceTree = "<group>"; };
@@ -202,29 +211,18 @@
 			children = (
 				990E70731A6D320900FAA35D /* MBProgressHUD.m */,
 				990E70721A6D31F600FAA35D /* MBProgressHUD.h */,
+				9975B6D61A83563B009427FF /* Main.storyboard */,
 				99C8C0ED1A6CCBD3001DCB68 /* UIKit+AFNetworking */,
 				99C8C0D01A6CCBC7001DCB68 /* AFNetworking */,
 				9932C3E51A5E6277006C90A4 /* AppDelegate.m */,
 				9932C3E41A5E6277006C90A4 /* AppDelegate.h */,
 				994D49051A6E116F002C3464 /* BossClass.h */,
 				994D49061A6E116F002C3464 /* BossClass.m */,
-				9932C3EA1A5E6277006C90A4 /* Main.storyboard */,
 				9932C3E71A5E6277006C90A4 /* ViewController.h */,
 				9932C3E81A5E6277006C90A4 /* ViewController.m */,
 				9932C4091A5EA651006C90A4 /* HomeViewController.h */,
 				9932C40A1A5EA651006C90A4 /* HomeViewController.m */,
-				99B2088F1A66712700C78871 /* NewMessageViewController.h */,
-				99B208901A66712700C78871 /* NewMessageViewController.m */,
-				99B208921A6677B000C78871 /* NewMessageCell.h */,
-				99B208931A6677B000C78871 /* NewMessageCell.m */,
-				9932C40C1A5EAEDA006C90A4 /* MessageViewController.h */,
-				9932C40D1A5EAEDA006C90A4 /* MessageViewController.m */,
-				9932C4151A5EBE3B006C90A4 /* MessageViewCell.h */,
-				9932C4161A5EBE3B006C90A4 /* MessageViewCell.m */,
-				9932C40F1A5EAEF5006C90A4 /* DetailMessageViewController.h */,
-				9932C4101A5EAEF5006C90A4 /* DetailMessageViewController.m */,
-				9932C4121A5EAF2F006C90A4 /* MessageDataModel.h */,
-				9932C4131A5EAF30006C90A4 /* MessageDataModel.m */,
+				99337E0B1A832B150056ADBC /* News */,
 				99FE3C261A7F7F3000A8C7AC /* AboutViewController.h */,
 				99FE3C271A7F7F3100A8C7AC /* AboutViewController.m */,
 				9951E7B01A80B5D6002BAE07 /* RateView.h */,
@@ -273,6 +271,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		99337E0B1A832B150056ADBC /* News */ = {
+			isa = PBXGroup;
+			children = (
+				99B2088F1A66712700C78871 /* NewMessageViewController.h */,
+				99B208901A66712700C78871 /* NewMessageViewController.m */,
+				99B208921A6677B000C78871 /* NewMessageCell.h */,
+				99B208931A6677B000C78871 /* NewMessageCell.m */,
+				9932C40C1A5EAEDA006C90A4 /* MessageViewController.h */,
+				9932C40D1A5EAEDA006C90A4 /* MessageViewController.m */,
+				9932C4151A5EBE3B006C90A4 /* MessageViewCell.h */,
+				9932C4161A5EBE3B006C90A4 /* MessageViewCell.m */,
+				9932C40F1A5EAEF5006C90A4 /* DetailMessageViewController.h */,
+				9932C4101A5EAEF5006C90A4 /* DetailMessageViewController.m */,
+				9932C4121A5EAF2F006C90A4 /* MessageDataModel.h */,
+				9932C4131A5EAF30006C90A4 /* MessageDataModel.m */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
 		993482871A81E52600A43401 /* Tips */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +297,12 @@
 				995408D21A63812F009BDAB7 /* TipsViewController.m */,
 				99553A011A6FE12400032118 /* TipsDetailViewController.h */,
 				99553A021A6FE12400032118 /* TipsDetailViewController.m */,
+				99337E0C1A832BC20056ADBC /* TipsViewCell.h */,
+				99337E0D1A832BC20056ADBC /* TipsViewCell.m */,
+				9975B6D31A834A02009427FF /* TipsDataModel.h */,
+				9975B6D41A834A02009427FF /* TipsDataModel.m */,
+				9975B6D91A837DD4009427FF /* TipsCatListViewController.h */,
+				9975B6DA1A837DD4009427FF /* TipsCatListViewController.m */,
 			);
 			name = Tips;
 			sourceTree = "<group>";
@@ -436,7 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9932C3EC1A5E6277006C90A4 /* Main.storyboard in Resources */,
+				9975B6D81A83563B009427FF /* Main.storyboard in Resources */,
 				9932C3F11A5E6277006C90A4 /* LaunchScreen.xib in Resources */,
 				9932C3EE1A5E6277006C90A4 /* Images.xcassets in Resources */,
 			);
@@ -469,6 +492,7 @@
 				99C8C0E41A6CCBC8001DCB68 /* AFHTTPRequestOperation.m in Sources */,
 				995408D31A63812F009BDAB7 /* TipsViewController.m in Sources */,
 				99C8C0E71A6CCBC8001DCB68 /* AFNetworkReachabilityManager.m in Sources */,
+				99337E0E1A832BC20056ADBC /* TipsViewCell.m in Sources */,
 				99C8C1011A6CCBD3001DCB68 /* UIAlertView+AFNetworking.m in Sources */,
 				9932C4171A5EBE3B006C90A4 /* MessageViewCell.m in Sources */,
 				99C8C0EC1A6CCBC8001DCB68 /* AFURLSessionManager.m in Sources */,
@@ -478,6 +502,7 @@
 				99C8C0E61A6CCBC8001DCB68 /* AFHTTPSessionManager.m in Sources */,
 				990E70711A6D05CE00FAA35D /* TicketDetailViewController.m in Sources */,
 				99E622081A68DB1B007F5581 /* ServiceOrdViewController.m in Sources */,
+				9975B6D51A834A02009427FF /* TipsDataModel.m in Sources */,
 				99C8C0EB1A6CCBC8001DCB68 /* AFURLResponseSerialization.m in Sources */,
 				99C8C0EA1A6CCBC8001DCB68 /* AFURLRequestSerialization.m in Sources */,
 				9942E7251A5F92300090513C /* ToolsViewController.m in Sources */,
@@ -488,6 +513,7 @@
 				9942E7281A5FB4E40090513C /* SettingViewController.m in Sources */,
 				99C8C0E81A6CCBC8001DCB68 /* AFSecurityPolicy.m in Sources */,
 				994D49071A6E116F002C3464 /* BossClass.m in Sources */,
+				9975B6DB1A837DD4009427FF /* TipsCatListViewController.m in Sources */,
 				99E622791A6949CA007F5581 /* SurveyViewController.m in Sources */,
 				9951E7B21A80B5D6002BAE07 /* RateView.m in Sources */,
 				9989C6041A78F0F600960AA9 /* DataBase.m in Sources */,
@@ -502,20 +528,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9932C3EA1A5E6277006C90A4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9932C3EB1A5E6277006C90A4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9932C3EF1A5E6277006C90A4 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9932C3F01A5E6277006C90A4 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		9975B6D61A83563B009427FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9975B6D71A83563B009427FF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

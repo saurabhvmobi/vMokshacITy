@@ -10,6 +10,11 @@
 
 @interface TipsDetailViewController ()
 
+{
+
+    NSArray *collectionData;
+}
+
 @end
 
 @implementation TipsDetailViewController
@@ -17,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    collectionData=@[@"test1",@"test2",@"test3",@"test4",@"test5",@"test6",@"test7",@"test8",@"test9"];
+
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +42,29 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return collectionData.count;
+}
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *identifier = @"cell";
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    
+    
+    
+    UILabel *lab=(UILabel *)[cell viewWithTag:100];
+    lab.text = collectionData[indexPath.row];
+
+    
+    
+    return cell;
+}
+
+
 
 @end

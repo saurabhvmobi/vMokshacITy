@@ -16,6 +16,8 @@
     NSArray *tableData;
 
     NSArray *tableimg;
+
+    NSInteger selectedRow;
 }
 @end
 
@@ -74,6 +76,12 @@
     UIImageView *img=(UIImageView *)[cell viewWithTag:100];
     img.image = [UIImage imageNamed:tableimg[indexPath.row]];
        
+     UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [self barColorForIndex:selectedRow];
+    [cell setSelectedBackgroundView:bgColorView];
+
+    
+    
     return cell;
 }
 

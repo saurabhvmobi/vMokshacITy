@@ -41,6 +41,8 @@
     arrimg=@[[UIImage imageNamed:@"call.png"],[UIImage imageNamed:@"call.png"],[UIImage imageNamed:@"call.png"]];
 
 
+
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,7 +95,7 @@
 - (IBAction)tipsAction:(id)sender {
 
     
-    [self.tabBarController setSelectedIndex:3];
+    [self.tabBarController setSelectedIndex:2];
 
 }
 

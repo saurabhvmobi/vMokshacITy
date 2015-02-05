@@ -18,9 +18,8 @@
     
     NSMutableArray *tableData;
 
-
     NSInteger selectedRow;
-}
+    }
 @end
 
 @implementation LanLocTheViewController
@@ -130,19 +129,28 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    if([_selectedSetting isEqualToString:@"Theme"]){
-    
-    selectedRow= indexPath.row;
-}
-}
+    }
 
 - (IBAction)doneButtonAction:(id)sender {
-    [[ NSUserDefaults standardUserDefaults] setInteger:selectedRow forKey:@"BackgroundTheme"];
+    
+    
+    if([_selectedSetting isEqualToString:@"Theme"]){
+        
+        selectedRow= [self.tableView indexPathForSelectedRow].row;
+    
+        
+        [[ NSUserDefaults standardUserDefaults] setInteger:selectedRow forKey:@"BackgroundTheme"];
+        
+        
+        [[UITabBar appearance] setBarTintColor:[self barColorForIndex:selectedRow]];
+        [[UINavigationBar appearance] setBarTintColor:[self barColorForIndex:selectedRow]];
+
+    }
+
+    
+       // [self.delegate selectedThemeIs:arrOfThemesData[selectedRow]];
    
     
-    [[UITabBar appearance] setBarTintColor:[self barColorForIndex:selectedRow]];
-    [[UINavigationBar appearance] setBarTintColor:[self barColorForIndex:selectedRow]];
-   // [self.delegate selectedThemeIs:arrOfThemesData[selectedRow]];
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }

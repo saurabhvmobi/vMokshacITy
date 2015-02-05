@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TipsDetailViewController : UIViewController
+@interface TipsDetailViewController : BossClass<UICollectionViewDataSource,UICollectionViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *lab;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+
 
 @end

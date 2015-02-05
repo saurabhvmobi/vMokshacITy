@@ -16,7 +16,7 @@
 @interface TipsViewController ()
 {
     NSMutableArray *tableData;
-    
+    NSInteger selectedrow;
     
 }
 
@@ -30,6 +30,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    
       [self getData];
 
 
@@ -77,7 +80,9 @@
     UILabel *lab=(UILabel *)[cell viewWithTag:101];
     lab.text=tableData[indexPath.row];
     
-    
+    UIView *bgColorView = [[UIView alloc]init];
+    bgColorView.backgroundColor = [self barColorForIndex:selectedrow];
+    [cell setSelectedBackgroundView:bgColorView];
     
     
     
@@ -86,13 +91,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 85;
+    return 74;
 }
 
 -(void)getData
 {
     NSString *str=[NSString stringWithFormat:@"http://simplicitytst.ripple-io.in/Search/TipsGroup"];
     
+    
+   
     
     
   AFHTTPRequestOperationManager  *manage = [AFHTTPRequestOperationManager manager];
@@ -118,19 +125,29 @@
              
              for (NSDictionary *adict in mainarr) {
                  
+                 BOOL status = [adict[@"Status"]boolValue];
                  
-                 NSString *str=adict[@"Name"];
-                 NSLog(@"%@",str);
-                 [tableData addObject:str];
-             
-             }
+                 if (status==true) {
+                     NSString *str=adict[@"Name"];
+                     NSLog(@"%@",str);
+                     [tableData addObject:str];
+                     
+ 
+                 }
+                 
+                 
+                }
              
              [_tableVIew reloadData];
+           
              
+             [MBProgressHUD hideHUDForView:self.view animated:YES];
              
          }
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
              NSLog(@"%@",error);
+        
+             [MBProgressHUD hideHUDForView:self.view animated:YES];
          }];
     
 

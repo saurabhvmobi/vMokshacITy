@@ -32,12 +32,14 @@
     // Do any additional setup after loading the view.
 
 
-    collectionviewData = @[@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation"];
+//    collectionviewData = @[@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation"];
     
     
     [self getDataFromWeb];
     
    labarrData=[[NSMutableArray alloc]init];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     
 }
@@ -76,8 +78,8 @@
     lab.text = model.serviceName;
     
     
-    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
-    recipeImageView.image = [UIImage imageNamed:[collectionviewData objectAtIndex:indexPath.row]];
+//    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
+//    recipeImageView.image = [UIImage imageNamed:[collectionviewData objectAtIndex:indexPath.row]];
     
     return cell;
 }
@@ -124,18 +126,20 @@
                  serv.serviceName=adict[@"Description"];
                  [labarrData addObject:serv];
                 
-                 NSString *urlstr=adict[@""];
-             
-                 NSLog(@"%@",urlstr);
              
              }
              
              
              [_collectionView reloadData];
              
+             [MBProgressHUD hideHUDForView:self.view animated:YES];
+             
              }
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
              NSLog(@"%@",error);
+        
+           [MBProgressHUD hideHUDForView:self.view animated:YES];
+         
          }];
     
     

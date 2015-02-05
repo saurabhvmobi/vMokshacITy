@@ -22,7 +22,7 @@
 @property (strong, nonatomic) UIImage *notSelectedImage;
 @property (strong, nonatomic) UIImage *halfSelectedImage;
 @property (strong, nonatomic) UIImage *fullSelectedImage;
-@property (assign, nonatomic) float rating;
+@property (assign, nonatomic) NSInteger rating;
 @property (assign) BOOL editable;
 @property (strong) NSMutableArray * imageViews;
 @property (assign, nonatomic) int maxRating;

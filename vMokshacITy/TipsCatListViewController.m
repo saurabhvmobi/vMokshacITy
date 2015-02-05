@@ -1,36 +1,34 @@
 //
-//  ToolsViewController.m
+//  TipsCatListViewController.m
 //  vMokshacITy
 //
-//  Created by Saurabh Suman on 09/01/15.
+//  Created by Saurabh Suman on 05/02/15.
 //  Copyright (c) 2015 Vmoksha Technologies Pvt Ltd. All rights reserved.
 //
 
-#import "ToolsViewController.h"
+#import "TipsCatListViewController.h"
 
-@interface ToolsViewController ()
+@interface TipsCatListViewController ()
 
 {
 
     NSArray *tableData;
 
-    NSInteger selectedRow;
-    
-    NSArray *imgtbldata;
+    NSInteger selectedrow;
 }
+
 
 @end
 
-@implementation ToolsViewController
+@implementation TipsCatListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
 
-    tableData =@[@"Lync Connection Checker",@"Days Left for Password expiry",@"Survey"];
+    tableData=@[@"tipsCatlist 1",@"tipsCatlist 1",@"tipsCatlist 1",@"tipsCatlist 1",@"tipsCatlist 1",@"tipsCatlist 1",];
 
-    imgtbldata=@[@"LyncToolsIcon",@"PasswordResetToolImage",@"SurveyToolIcon"];
 
 }
 
@@ -38,6 +36,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+
+}
+
+
+
+
 
 /*
 #pragma mark - Navigation
@@ -48,90 +57,42 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    
     return 1;
-    
 }
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
     return [tableData count];
-}
 
+}
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    static NSString *cellidentifier=@"cell";
+static NSString *cellidentifier=@"cell";
     
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellidentifier];
-    
-   
-    UILabel *lab=(UILabel *)[cell viewWithTag:101];
+    UILabel *lab=(UILabel *)[cell viewWithTag:100];
     lab.text=tableData[indexPath.row];
-    
-    UIImageView *img=(UIImageView *)[cell viewWithTag:100];
-    img.image = [UIImage imageNamed:imgtbldata[indexPath.row]];
+
     
     UIView *bgColorView = [[UIView alloc] init];
-    bgColorView.backgroundColor = [self barColorForIndex:selectedRow];
+    bgColorView.backgroundColor = [self barColorForIndex:selectedrow];
     [cell setSelectedBackgroundView:bgColorView];
 
     
+    
+    
+    
     return cell;
+
 }
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 44;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    if (indexPath.row==0) {
-        [self performSegueWithIdentifier:@"LyncCheckersegue" sender:self];
-    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 
-
-    if (indexPath.row==1) {
-        [self performSegueWithIdentifier:@"PasswordExp" sender:self];
-    }
-    
-    if (indexPath.row==2) {
-        [self performSegueWithIdentifier:@"surveySegu" sender:self];
-    }
-    
-
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
