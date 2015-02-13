@@ -32,6 +32,8 @@
     if ([_selectedSetting isEqualToString:@"Language"]) {
       // tableData=@[@"English",@"Dutch",@"German",@"Franch",@"German",@"Spanish",@"Japanese"];
     
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
         [self getDataFrmoWeb];
     
     }
@@ -118,6 +120,9 @@
     UILabel *lab=(UILabel *)[cell viewWithTag:100];
     
     lab.text=tableData[indexPath.row];
+    
+    lab.highlightedTextColor=[UIColor whiteColor];
+    
     
     UIView *bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [self barColorForIndex:selectedRow];
@@ -218,10 +223,16 @@
              
              [_tableView reloadData];
              
+             [MBProgressHUD hideHUDForView:self.view animated:YES];
+
              
          }
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
              NSLog(@"%@",error);
+         
+         
+             [MBProgressHUD hideHUDForView:self.view animated:YES];
+         
          }];
     
     

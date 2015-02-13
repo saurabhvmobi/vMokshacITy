@@ -71,12 +71,14 @@
     
     UILabel *lab=(UILabel *)[cell viewWithTag:101];
     lab.text=tableData[indexPath.row];
-    
+      lab.highlightedTextColor=[UIColor whiteColor];
     
     UIImageView *img=(UIImageView *)[cell viewWithTag:100];
     img.image = [UIImage imageNamed:tableimg[indexPath.row]];
-       
-     UIView *bgColorView = [[UIView alloc] init];
+    
+    
+    
+    UIView *bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [self barColorForIndex:selectedRow];
     [cell setSelectedBackgroundView:bgColorView];
 

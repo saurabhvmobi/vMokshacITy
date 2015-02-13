@@ -13,5 +13,5 @@
 
 @interface ServicesViewController : BossClass<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
+@property(nonatomic,strong)serviceModel *model;
 @end

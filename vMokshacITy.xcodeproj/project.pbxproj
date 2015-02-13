@@ -30,6 +30,7 @@
 		9951E7B21A80B5D6002BAE07 /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9951E7B11A80B5D6002BAE07 /* RateView.m */; };
 		995408D31A63812F009BDAB7 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995408D21A63812F009BDAB7 /* TipsViewController.m */; };
 		99553A031A6FE12400032118 /* TipsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99553A021A6FE12400032118 /* TipsDetailViewController.m */; };
+		995B49171A888B1A005B5E58 /* Postman.m in Sources */ = {isa = PBXBuildFile; fileRef = 995B49161A888B19005B5E58 /* Postman.m */; };
 		9975B6D51A834A02009427FF /* TipsDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9975B6D41A834A02009427FF /* TipsDataModel.m */; };
 		9975B6D81A83563B009427FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9975B6D61A83563B009427FF /* Main.storyboard */; };
 		9975B6DB1A837DD4009427FF /* TipsCatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9975B6DA1A837DD4009427FF /* TipsCatListViewController.m */; };
@@ -111,6 +112,8 @@
 		995408D21A63812F009BDAB7 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
 		99553A011A6FE12400032118 /* TipsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsDetailViewController.h; sourceTree = "<group>"; };
 		99553A021A6FE12400032118 /* TipsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsDetailViewController.m; sourceTree = "<group>"; };
+		995B49151A888B19005B5E58 /* Postman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Postman.h; sourceTree = "<group>"; };
+		995B49161A888B19005B5E58 /* Postman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Postman.m; sourceTree = "<group>"; };
 		9975B6D31A834A02009427FF /* TipsDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsDataModel.h; sourceTree = "<group>"; };
 		9975B6D41A834A02009427FF /* TipsDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsDataModel.m; sourceTree = "<group>"; };
 		9975B6D71A83563B009427FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -237,6 +240,8 @@
 				993482881A81E53C00A43401 /* setting */,
 				9989C6021A78F0F600960AA9 /* DataBase.h */,
 				9989C6031A78F0F600960AA9 /* DataBase.m */,
+				995B49151A888B19005B5E58 /* Postman.h */,
+				995B49161A888B19005B5E58 /* Postman.m */,
 				9932C3ED1A5E6277006C90A4 /* Images.xcassets */,
 				9932C3EF1A5E6277006C90A4 /* LaunchScreen.xib */,
 				9932C3E01A5E6277006C90A4 /* Supporting Files */,
@@ -475,6 +480,7 @@
 				99C8C1021A6CCBD3001DCB68 /* UIButton+AFNetworking.m in Sources */,
 				9932C3E91A5E6277006C90A4 /* ViewController.m in Sources */,
 				99B208911A66712700C78871 /* NewMessageViewController.m in Sources */,
+				995B49171A888B1A005B5E58 /* Postman.m in Sources */,
 				9942E72E1A5FC7010090513C /* RaiseTicketViewController.m in Sources */,
 				99C8C1041A6CCBD3001DCB68 /* UIProgressView+AFNetworking.m in Sources */,
 				99E6220B1A68EFB5007F5581 /* myTicOrdViewController.m in Sources */,

@@ -98,11 +98,7 @@
 {
     NSString *str=[NSString stringWithFormat:@"http://simplicitytst.ripple-io.in/Search/TipsGroup"];
     
-    
-   
-    
-    
-  AFHTTPRequestOperationManager  *manage = [AFHTTPRequestOperationManager manager];
+    AFHTTPRequestOperationManager  *manage = [AFHTTPRequestOperationManager manager];
     AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
     
     [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];

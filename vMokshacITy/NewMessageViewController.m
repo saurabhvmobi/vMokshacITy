@@ -102,6 +102,11 @@
     
     cell.imgRight.image=arrtexrightimaget[indexPath.row];
     
+  
+    
+    
+    
+    
     
     return cell;
 }

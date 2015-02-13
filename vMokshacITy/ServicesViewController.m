@@ -7,19 +7,23 @@
 //
 
 #import "ServicesViewController.h"
+
+#import "serviceModel.h"
+
+
 #define WEB_CLIPS @""
 
-#define IMAGE_SEARCH_API
+#define IMAGE_SEARCH_API @"http://simplicitytst.ripple-io.in/RenderDocument"
 
 
 @interface ServicesViewController ()
 
 {
-   NSArray *collectionviewData;
+    NSArray *collectionviewData;
     NSMutableArray *labarrData;
     AFHTTPRequestOperationManager *manager;
 
-
+    NSMutableArray *imgData;
     
     
 }
@@ -35,14 +39,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-
+   
+    
 //    collectionviewData = @[@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation",@"lacation"];
     
     
     [self getDataFromWeb];
     
-   labarrData=[[NSMutableArray alloc]init];
+   
     
+    
+    labarrData=[[NSMutableArray alloc]init];
+    imgData=[[NSMutableArray alloc]init];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     
@@ -78,12 +86,14 @@
     serviceModel *model= labarrData[indexPath.row];
     
     
+   
+    
     UILabel *lab=(UILabel *)[cell viewWithTag:101];
     lab.text = model.serviceName;
     
     
-//    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
-//    recipeImageView.image = [UIImage imageNamed:[collectionviewData objectAtIndex:indexPath.row]];
+  //  UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
+  // imageView.image = [UIImage imageNamed:[imgData objectAtIndex:indexPath.row]];
     
     return cell;
 }
@@ -125,18 +135,21 @@
              for (NSDictionary *adict in arr) {
                 
                  
-               serviceModel *serv=[[serviceModel alloc]init];
+               self.model=[[serviceModel alloc]init];
                 
-                 serv.serviceName=adict[@"Description"];
+                 self.model.serviceName=adict[@"Description"];
                  
-                 serv.documentCode=adict[@"DocumentCode"];
+                 self.model.documentCode=adict[@"DocumentCode"];
              
-                 [labarrData addObject:serv];
+                 [labarrData addObject:self.model];
              
+                 NSLog(@"%@",self.model.documentCode);
              
-             
-             }
-             
+            
+         
+            }
+             [self getingDataImage];
+
              
              [_collectionView reloadData];
              
@@ -157,26 +170,10 @@
 -(void)getingDataImage
 {
 
-    serviceModel *model=[[serviceModel alloc]init];
-    
-    
-    
-    NSString *str=[NSString stringWithFormat:@"IMAGE_SEARCH_API"];
-    
-  //  NSString *mainUrl=[str stringByAppendingString:@"%@",(model.documentCode)];
-    
-    
-    
-    
-    
-    
     
    
     
-    
-    
-    
-    
+    NSString *urlstr=[NSString stringWithFormat:@"http://simplicitytst.ripple-io.in/RenderDocument/%@",self.model.documentCode];
     manager = [AFHTTPRequestOperationManager manager];
     AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
     
@@ -186,43 +183,21 @@
     
     
     
-    NSDictionary *paraDICt=[NSJSONSerialization JSONObjectWithData:[WEB_CLIPS dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
     
     
-    [manager POST:str
-       parameters:paraDICt
+    [manager GET:urlstr
+       parameters:nil
           success:^(AFHTTPRequestOperation *operation, id responseObject){
               NSData *responseData = [operation responseData];
               
-              
-              //  NSLog(@"%@",responseData);
-              
               NSDictionary *mainDict=[NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
-              // NSLog(@"%@",mainDict);
               
-              NSArray *arr=mainDict[@"aaData"][@"WebClips"];
-              
+              NSLog(@"%@",mainDict);
               
               
-              for (NSDictionary *adict in arr) {
-                  
-                  
-                  serviceModel *serv=[[serviceModel alloc]init];
-                  
-                  serv.serviceName=adict[@"Description"];
-                  
-                  serv.documentCode=adict[@"DocumentCode"];
-                  
-                  [labarrData addObject:serv];
-                  
-                  
-                  
-              }
               
               
-              [_collectionView reloadData];
               
-              [MBProgressHUD hideHUDForView:self.view animated:YES];
               
           }
           failure:^(AFHTTPRequestOperation *operation, NSError *error) {
